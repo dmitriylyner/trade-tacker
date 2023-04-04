@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root{
+    --gradient-color: #B5DEDB;
+    --dark-1: #164B4C;
+}
