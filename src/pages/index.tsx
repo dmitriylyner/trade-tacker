@@ -34,6 +34,8 @@ const Home: NextPage = () => {
             w-full
             px-4
             text-lg text-gray-700
+            relative
+            z-10
           "
         >
         <div className="h-full">
@@ -132,13 +134,13 @@ const Home: NextPage = () => {
 
           <div className='flex flex-col md:flex-row w-full'>
             <div className="md:w-1/2  py-28  bg-main-pattern bg-cover px-28 text-slate-50">
-                <h2 className="text-3xl font-bold">Track. Analyze. Progress.</h2>
+                <h2 className="text-3xl font-bold mb-4">Track. Analyze. Progress.</h2>
                 <p className="max-w-prose">Built-in tools to help you maximize your winning trades and decrease your losing ones. Build up a proven history of wins to help you break out to the next level.</p>
             </div>
 
             <div className=" md:w-1/2 py-28 sm:grid-cols-2 md:gap-8 bg-[var(--dark-1)] bg-cover px-28 text-slate-50">
-                <h2 className="text-3xl font-bold">Redefining the stock journal.</h2>
-                <p>Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
+                <h2 className="text-3xl font-bold mb-4">Redefining the stock journal.</h2>
+                <p className="mb-4">Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
                 <Link
                     className="inline-block max-w-xl text-center rounded-sm bg-main-teal py-4 px-12 text-slate-950 hover:bg-white/20"
                     href="https://create.t3.gg/en/introduction"
@@ -149,60 +151,71 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="py-28 px-4">
-            <h2 className="text-6xl font-bold text-center">Unlocking new paradigms</h2>
+          <div className="mt-44 px-4 ">
+            <h2 className="text-5xl mb-10 font-bold text-center">Unlocking new paradigms</h2>
             <Image 
               src={AppPreviewImg}
               alt='Trade Tracker App Preview'
+              className="relative z-10"
             />
 
           </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8 px-8 py-16 text-slate-50 bg-pattern-2 bg-cover">
-            <h3 className="text-lg">Why Trade Tracker?</h3>
-            <h2 className="text-2xl font-bold text-slate-950">Habit and performance</h2>
+          <div className="bg-pattern-2 bg-cover w-full -mt-48">
+            <div className=" text-slate-50 mx-64 my-32">
+              <div className="pt-36">
+                <h3 className="text-2xl">Why Trade Tracker?</h3>
+                <h2 className="text-5xl font-bold text-slate-950">Habit and performance</h2>
+              </div>
 
-            <div>
-              <IconChart className='text-6xl'/>
-              <h4 className="font-bold">Customizable charts</h4>
-              <p>Create charts based on the metrics you want to track.</p>
-            </div>
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-8 py-16">
+                <div className="my-2">
+                  <IconChart className='text-6xl'/>
+                  <h4 className="font-bold my-2">Customizable charts</h4>
+                  <p>Create charts based on the metrics you want to track.</p>
+                </div>
 
-            <div>
-              <IconPie className='text-6xl'/>
-              <h4 className="font-bold">Analyze portfolios</h4>
-              <p>Personal, retirement, crypto, options, you name it. </p>
-            </div>
+                <div className="my-2">
+                  <IconPie className='text-6xl'/>
+                  <h4 className="font-bold my-2">Analyze portfolios</h4>
+                  <p>Personal, retirement, crypto, options, you name it. </p>
+                </div>
 
-            <div>
-              <IconClipboard className='text-6xl'/>
-              <h4 className="font-bold">Evaluate trades</h4>
-              <p>Get a new perspective on past trades and how to improve.</p>
-            </div>
+                <div className="my-2">
+                  <IconClipboard className='text-6xl'/>
+                  <h4 className="font-bold my-2">Evaluate trades</h4>
+                  <p>Get a new perspective on past trades and how to improve.</p>
+                </div>
 
-            <div>
-              <IconFlag className='text-6xl'/>
-              <h4 className="font-bold">Personalized Notes</h4>
-              <p>Create shortcuts and reminders to get you performing to your best.</p>
+                <div className="my-2">
+                  <IconFlag className='text-6xl'/>
+                  <h4 className="font-bold my-2">Personalized Notes</h4>
+                  <p>Create shortcuts and reminders to get you performing to your best.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="py-16 px-8 bg-white">
-            <h3 className="text-lg text-mail-teal">Level up</h3>
-            <h2 className="text-2xl font-bold text-slate-950">Watch your progress</h2>
-            <p>Gain consistency through data. View insights and performance of your trades over time. Unlock your highest level of performance now.</p>
-            <Link
-                  className="flex max-w-xl flex-col gap-4 text-center rounded-sm bg-main-teal py-4 px-12 text-slate-950 hover:bg-white/20"
-                  href="https://create.t3.gg/en/introduction"
-                  target="_blank"
-                >
-                <span className="font-bold text-slate-50 ">Start free trail →</span>
-              </Link>
+          <div className="py-16 px-8 bg-white w-full">
+            <div className="flex flex-col md:flex-row">
+              <div>
+                <h3 className="text-lg text-mail-teal">Level up</h3>
+                <h2 className="text-2xl font-bold text-slate-950">Watch your progress</h2>
+                <p>Gain consistency through data. View insights and performance of your trades over time. Unlock your highest level of performance now.</p>
+                <Link
+                      className="inline-block max-w-xl text-center rounded-sm bg-main-teal py-4 px-12 text-slate-950 hover:bg-white/20"
+                      href="https://create.t3.gg/en/introduction"
+                      target="_blank"
+                    >
+                    <span className="font-bold text-slate-50 ">Start free trail →</span>
+                  </Link>
+              </div>
 
               <Image 
                 src={PhoneView}
                 alt='Trade Tracker Phone App View'
               />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 gap-4 py-28 sm:grid-cols-2 md:gap-8  bg-cover px-4 text-slate-950">
