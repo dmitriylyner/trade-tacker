@@ -32,14 +32,11 @@ const Home: NextPage = () => {
             items-center
             justify-between
             w-full
-            py-4
-            md:py-0
             px-4
             text-lg text-gray-700
-            bg-white
           "
         >
-        <div className="h-4">
+        <div className="h-full">
             <a href="#">
             <svg viewBox="0 0 216 68" width="216" height="68" className="h-12">
               <clipPath id="clip">
@@ -48,7 +45,7 @@ const Home: NextPage = () => {
               d="M 33.896484,0 A 33.896099,33.896099 0 0 0 0,33.896484 33.896099,33.896099 0 0 0 11.689453,59.455078 V 45.583984 h 4.089844 v -4.673828 h 2.337891 v 4.673828 h 4.089843 v 20.019532 a 33.896099,33.896099 0 0 0 11.103516,2.158203 V 63.117188 H 29.220703 V 24.544922 h 4.089844 v -4.673828 h 2.337891 v 4.673828 h 4.091796 v 38.572266 h -4.091796 v 4.625 A 33.96099,33.896099 0 0 0 67.792969,33.896484 33.896099,33.896099 0 0 0 56.103516,8.292969 v 24.435547 h -4.089844 v 4.673828 H 49.675781 V 32.728516 H 45.583984 V 2.0800781 A 33.896099,33.896099 0 0 0 33.896484,0 Z" />
               </clipPath>
 
-              <foreignObject x="0" y="0" width="68" height="68" clip-path="url(#clip)">
+              <foreignObject x="0" y="0" width="68" height="68" clipPath="url(#clip)">
                   <div className="gradient" xmlns="http://www.w3.org/1999/xhtml" style={{width: "68px", height: "68px", borderRadius: "50%", backgroundImage: "conic-gradient(from 180deg at 50% 50%, #164B4C 0deg, #06BD9A 360deg)"}}
            />
               </foreignObject>
@@ -65,9 +62,9 @@ const Home: NextPage = () => {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
@@ -78,29 +75,30 @@ const Home: NextPage = () => {
                 pt-4
                 text-base text-gray-700
                 md:flex
+                items-center
                 md:justify-between 
                 md:pt-0"
             >
-              <li>
-                <a className="md:p-4 py-2 block hover:text-main-teal" href="#"
+              <li className="p-4">
+                <a className=" block hover:text-main-teal" href="#"
                   >Features</a
                 >
               </li>
-              <li>
-                <a className="md:p-4 py-2 block hover:text-main-teal" href="#"
+              <li className="p-4">
+                <a className=" block hover:text-main-teal" href="#"
                   >Pricing</a
                 >
               </li>
-              <li>
+              <li className="p-4">
                 <a
-                  className="md:p-4 py-2 block hover:bg-main-teal text-slate-50 bg-[var(--dark-1)]"
+                  className="md:px-6 md:py-2 block hover:bg-main-teal text-slate-50 bg-[var(--dark-1)] rounded-2xl "
                   href="#"
                   >Sign Up</a
                 >
               </li>
-              <li>
+              <li className="p-4">
                 <a
-                  className="md:p-4 py-2 block hover:text-main-teal text-[var(--dark-1)]"
+                  className=" block hover:text-main-teal text-[var(--dark-1)]"
                   href="#"
                   >Log In</a
                 >
@@ -109,16 +107,16 @@ const Home: NextPage = () => {
           </div>
       </nav>
       </header>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-[#FFFFFF] to-[var(--gradient-color)]">
-        <div className=" flex flex-col items-center justify-center pb-12">
-          <div className="container flex flex-col items-center justify-center mt-40 md:flex-row md:h-screen md:mt-0 ">
-            <div className="space-y-4 md:max-w-prose">
+      <main className="-mt-20 flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-[#FFFFFF] to-[var(--gradient-color)]">
+        <div className=" flex flex-col items-center justify-center pb-12 w-full">
+          <div className="container  flex flex-col items-center justify-center mt-40 md:flex-row md:h-screen md:mt-0 md:justify-evenly ">
+            <div className="space-y-4 max-w-screen-sm">
               <h1 className="text-4xl font-extrabold tracking-tight text-center text-slate-950 lg:text-[5rem] md:text-left md:leading-none ">
                 Track & improve your trades
               </h1>
-              <p className="text-center md:text-left">Gain consistency through data. View insights and performance of your trades over time.</p>
+              <p className="text-center md:text-left md:max-w-prose">Gain consistency through data. View insights and performance of your trades over time.</p>
               <Link
-                  className="flex max-w-xl flex-col gap-4 rounded-sm bg-main-teal py-4 px-12 text-slate-950 hover:bg-white/20"
+                  className="inline-block max-w-xl rounded-sm bg-main-teal py-4 px-12 text-slate-950 hover:bg-white/20"
                   href="https://create.t3.gg/en/introduction"
                   target="_blank"
                 >
@@ -132,17 +130,17 @@ const Home: NextPage = () => {
             />
           </div>
 
-          <div>
-            <div className="grid grid-cols-1 gap-4 py-28 sm:grid-cols-2 md:gap-8 bg-main-pattern bg-cover px-4 text-slate-50">
-                <h2 className="text-2xl font-bold">Track. Analyze. Progress.</h2>
-                <p>Built-in tools to help you maximize your winning trades and decrease your losing ones. Build up a proven history of wins to help you break out to the next level.</p>
+          <div className='flex flex-col md:flex-row w-full'>
+            <div className="md:w-1/2  py-28  bg-main-pattern bg-cover px-28 text-slate-50">
+                <h2 className="text-3xl font-bold">Track. Analyze. Progress.</h2>
+                <p className="max-w-prose">Built-in tools to help you maximize your winning trades and decrease your losing ones. Build up a proven history of wins to help you break out to the next level.</p>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 py-28 sm:grid-cols-2 md:gap-8 bg-[var(--dark-1)] bg-cover px-4 text-slate-50">
-                <h2 className="text-2xl font-bold">Redefining the stock journal.</h2>
+            <div className=" md:w-1/2 py-28 sm:grid-cols-2 md:gap-8 bg-[var(--dark-1)] bg-cover px-28 text-slate-50">
+                <h2 className="text-3xl font-bold">Redefining the stock journal.</h2>
                 <p>Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
                 <Link
-                    className="flex max-w-xl flex-col gap-4 text-center rounded-sm bg-main-teal py-4 px-12 text-slate-950 hover:bg-white/20"
+                    className="inline-block max-w-xl text-center rounded-sm bg-main-teal py-4 px-12 text-slate-950 hover:bg-white/20"
                     href="https://create.t3.gg/en/introduction"
                     target="_blank"
                   >
@@ -152,7 +150,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className="py-28 px-4">
-            <h2 className="text-4xl font-bold text-center">Unlocking new paradigms</h2>
+            <h2 className="text-6xl font-bold text-center">Unlocking new paradigms</h2>
             <Image 
               src={AppPreviewImg}
               alt='Trade Tracker App Preview'
