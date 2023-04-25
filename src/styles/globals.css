@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+}
 
 :root{
     --gradient-color: #B5DEDB;
     --dark-1: #164B4C;
+}
+
+.max-ch-25{
+    max-width: 26ch;
 }

@@ -12,7 +12,7 @@ const Button: React.FC<Props> = ({
 }) => {
     return (
         <Link
-            className="inline-block shadow-md max-w-xl rounded-sm bg-main-teal py-4 px-12 text-slate-950 hover:bg-white/20"
+            className="inline-block shadow-md max-w-xl rounded-sm bg-main-color-400 py-4 px-12 text-slate-950 hover:bg-color-500 transition-colors"
             href={to}
             target="_blank"
         >
@@ -22,9 +22,7 @@ const Button: React.FC<Props> = ({
 }
 
 
-export function ButtonSecondary({
-    children
-}){
+export function ButtonSecondary({ children }: {children: string } ){
     return (
         <Link
             className="inline-block shadow-md max-w-xl rounded-sm  py-4 px-12 text-slate-950 hover:bg-white/20"

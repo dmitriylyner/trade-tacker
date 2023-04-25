@@ -15,7 +15,13 @@ export default {
     },
     extend: {
       colors: {
-        'main-teal': '#06BD9A',
+        'color-100': '#D5FDF5',
+        'color-200': '#98FAE7',
+        'color-300': '#0FEBC3',
+        'main-color-400': '#06BD9A',
+        'color-500': '#119B81',
+        'color-600': '#186E5F',
+        'color-700': '#164B4C'
       },
       backgroundImage: {
         'main-pattern': "url('/images/main-pattern.jpg')",

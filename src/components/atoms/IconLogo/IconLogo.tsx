@@ -1,7 +1,7 @@
 
 export default function IconLogo(){
     return (
-        <div className="h-full">
+        <div className="h-full flex items-center">
             <a href="#">
                 <svg viewBox="0 0 216 68" width="216" height="68" className="h-12">
                     <clipPath id="clip">

@@ -38,9 +38,27 @@ const Home: NextPage = () => {
             text-lg text-gray-700
             relative
             z-10
+            h-20
           "
         >
           <IconLogo />
+
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              id="menu-button"
+              className="h-6 w-6 cursor-pointer md:hidden block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        
           <div className="hidden w-full md:flex md:items-center md:w-auto" id="menu">
               <ul
                 className="
@@ -52,28 +70,20 @@ const Home: NextPage = () => {
                   md:pt-0"
               >
                 <li className="p-4">
-                  <a className=" block hover:text-main-teal" href="#"
-                    >Features</a
-                  >
+                  <a className=" block hover:text-main-color-400 transition-colors" href="#features">Features</a>
                 </li>
                 <li className="p-4">
-                  <a className=" block hover:text-main-teal" href="#"
-                    >Pricing</a
-                  >
+                  <a className=" block hover:text-main-color-400 transition-colors" href="#">Pricing</a>
                 </li>
                 <li className="p-4">
                   <a
-                    className="md:px-6 md:py-2 block hover:bg-main-teal text-slate-50 bg-[var(--dark-1)] rounded-2xl "
-                    href="#"
-                    >Sign Up</a
-                  >
+                    className="md:px-6 md:py-2 block hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
+                    href="#">Sign Up</a>
                 </li>
                 <li className="p-4">
                   <a
-                    className=" block hover:text-main-teal text-[var(--dark-1)]"
-                    href="#"
-                    >Log In</a
-                  >
+                    className=" block hover:text-main-color-400 text-[var(--dark-1)] transition-colors"
+                    href="#">Log In</a>
                 </li>
               </ul>
           </div>
@@ -83,8 +93,8 @@ const Home: NextPage = () => {
       <main className="-mt-20 flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-[#FFFFFF] to-[var(--gradient-color)]">
         <div className=" flex flex-col items-center justify-center pb-12 w-full">
           <div className="container flex flex-col items-center justify-center mt-40 md:flex-row md:h-screen md:mt-0 md:justify-evenly ">
-            <div className="space-y-4 max-w-screen-sm">
-              <h1 className="text-4xl font-extrabold tracking-tight text-center text-slate-950 lg:text-[5rem] md:text-left md:leading-none ">
+            <div className="space-y-5 max-w-screen-sm">
+              <h1 className="text-4xl font-extrabold tracking-tight text-center text-slate-950 lg:text-[5rem] md:text-left md:leading-none drop-shadow-md">
                 Track & improve your trades
               </h1>
               <p className="text-center md:text-left md:max-w-prose">Gain consistency through data. View insights and performance of your trades over time.</p>
@@ -97,21 +107,21 @@ const Home: NextPage = () => {
             />
           </div>
 
-          <div className='flex flex-col md:flex-row w-full'>
-            <div className="md:w-1/2  py-28  bg-main-pattern bg-cover px-28 text-slate-50">
-                <h2 className="text-3xl font-bold mb-4">Track. Analyze. Progress.</h2>
+          <div className='flex flex-col md:flex-row w-full' id="features">
+            <div className="md:w-1/2  py-28  bg-main-pattern bg-cover px-12 md:px-28 text-slate-50">
+                <h2 className="text-3xl font-bold mb-4 drop-shadow-md">Track. Analyze. Progress.</h2>
                 <p className="max-w-prose">Built-in tools to help you maximize your winning trades and decrease your losing ones. Build up a proven history of wins to help you break out to the next level.</p>
             </div>
 
-            <div className=" md:w-1/2 py-28 sm:grid-cols-2 md:gap-8 bg-[var(--dark-1)] bg-cover px-28 text-slate-50">
-                <h2 className="text-3xl font-bold mb-4">Redefining the stock journal.</h2>
+            <div className=" md:w-1/2 py-28 sm:grid-cols-2 md:gap-8 bg-[var(--dark-1)] bg-cover px-12 md:px-28 text-slate-50">
+                <h2 className="text-3xl font-bold mb-4 drop-shadow-md">Redefining the stock journal.</h2>
                 <p className="mb-4">Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
                 <Button to="https://create.t3.gg/en/introduction">See Metrics →</Button>
             </div>
           </div>
 
-          <div className="mt-44 px-4 ">
-            <h2 className="text-5xl mb-10 font-bold text-center">Unlocking new paradigms</h2>
+          <div className="mt-16 md:mt-44 px-4 ">
+            <h2 className="text-4xl md:text-5xl mb-10 font-bold text-center">Unlocking new paradigms</h2>
             <Image 
               src={AppPreviewImg}
               alt='Trade Tracker App Preview'
@@ -121,47 +131,75 @@ const Home: NextPage = () => {
           </div>
 
           <div className="bg-pattern-2 bg-cover w-full -mt-48">
-            <div className=" text-slate-50 mx-64 my-32">
+            <div className=" text-slate-50 mx-12 md:mx-36 lg:mx-auto lg:max-w-6xl my-32">
               <div className="pt-36">
                 <h3 className="text-2xl">Why Trade Tracker?</h3>
-                <h2 className="text-5xl font-bold text-slate-950">Habit and performance</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md">Habit and performance</h2>
               </div>
 
-              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-8 py-16">
+              {/* <div className="flex py-16 align-items justify-between">
                 <div className="my-2">
                   <IconChart className='text-6xl'/>
-                  <h4 className="font-bold my-2">Customizable charts</h4>
-                  <p>Create charts based on the metrics you want to track.</p>
+                  <h4 className="font-bold my-2 drop-shadow-md">Customizable charts</h4>
+                  <p className="max-ch-25">Create charts based on the metrics you want to track.</p>
                 </div>
 
                 <div className="my-2">
                   <IconPie className='text-6xl'/>
-                  <h4 className="font-bold my-2">Analyze portfolios</h4>
-                  <p>Personal, retirement, crypto, options, you name it. </p>
+                  <h4 className="font-bold my-2 drop-shadow-md">Analyze portfolios</h4>
+                  <p className="max-ch-25">Personal, retirement, crypto, options, stocks, you name it. </p>
                 </div>
 
-                <div className="my-2">
+                <div className="my-2 ">
                   <IconClipboard className='text-6xl'/>
-                  <h4 className="font-bold my-2">Evaluate trades</h4>
-                  <p>Get a new perspective on past trades and how to improve.</p>
+                  <h4 className="font-bold my-2 drop-shadow-md" >Evaluate trades</h4>
+                  <p className="max-ch-25">Get a new perspective on past trades and how to improve.</p>
                 </div>
 
                 <div className="my-2">
                   <IconFlag className='text-6xl'/>
-                  <h4 className="font-bold my-2">Personalized Notes</h4>
-                  <p>Create shortcuts and reminders to get you performing to your best.</p>
+                  <h4 className="font-bold my-2 drop-shadow-md">Personalized Notes</h4>
+                  <p className="max-ch-25">Create shortcuts and reminders to perform your best.</p>
+                </div>
+              </div> */}
+
+              <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-8 py-16 md:grid-flow-col-dense">
+                <div className="my-2">
+                  <IconChart className='text-6xl'/>
+                  <h4 className="font-bold my-2 drop-shadow-md">Customizable charts</h4>
+                  <p className="max-ch-25">Create charts based on the metrics you want to track.</p>
+                </div>
+
+                <div className="my-2">
+                  <IconPie className='text-6xl'/>
+                  <h4 className="font-bold my-2 drop-shadow-md">Analyze portfolios</h4>
+                  <p className="max-ch-25">Personal, retirement, crypto, options, stocks, you name it. </p>
+                </div>
+
+                <div className="my-2 ">
+                  <IconClipboard className='text-6xl'/>
+                  <h4 className="font-bold my-2 drop-shadow-md" >Evaluate trades</h4>
+                  <p className="max-ch-25">Get a new perspective on past trades and how to improve.</p>
+                </div>
+
+                <div className="my-2">
+                  <IconFlag className='text-6xl'/>
+                  <h4 className="font-bold my-2 drop-shadow-md">Personalized Notes</h4>
+                  <p className="max-ch-25">Create shortcuts and reminders to perform your best.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="py-16 px-8 bg-white w-full">
-            <div className="flex flex-col md:flex-row">
-              <div>
-                <h3 className="text-lg text-mail-teal">Level up</h3>
-                <h2 className="text-2xl font-bold text-slate-950">Watch your progress</h2>
-                <p>Gain consistency through data. View insights and performance of your trades over time. Unlock your highest level of performance now.</p>
-                <Button to="https://create.t3.gg/en/introduction">Start free trail →</Button>
+          <div className="px-8 bg-white w-full">
+            <div className="flex flex-col md:flex-row lg:mx-auto lg:max-w-6xl lg:my-32">
+              <div >
+                <h3 className="text-2xl text-mail-teal">Level up</h3>
+                <div className="space-y-5">
+                  <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md">Watch your progress</h2>
+                  <p className="lg:max-w-prose">Gain consistency through data. View insights and performance of your trades over time. Unlock your highest level of performance now.</p>
+                  <Button to="https://create.t3.gg/en/introduction">See metrics →</Button>
+                </div>
               </div>
 
               <Image 
@@ -171,25 +209,31 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 py-28 sm:grid-cols-2 md:gap-8  bg-cover px-4 text-slate-950">
-              <h2 className="text-2xl font-bold">Ready to get started?</h2>
-              <p>Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
-              <Button to="https://create.t3.gg/en/introduction">See Metrics →</Button>
-              <div className="flex justify-around">
-                <div className="bg-slate-50 w-5/12 p-2 rounded-lg">
+          <div className="px-8 w-full lg:my-32">
+            <div className="flex flex-col md:flex-row lg:mx-auto lg:max-w-6xl lg:my-32">
+              <div className="space-y-5">
+                  <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md">Ready to get started?</h2>
+                  <p className="lg:max-w-prose">Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
+                  <Button to="https://create.t3.gg/en/introduction">Start free trail →</Button>
+              </div>
+
+              <div className="flex justify-around w-3/5">
+                <div className="bg-slate-50 w-5/12 p-6 rounded-lg">
                   <h3>Free</h3>
                   <p>1 portfolio</p>
                 </div>
-                <div className="bg-slate-50 w-5/12 p-2 rounded-lg">
+                <div className="bg-slate-50 w-5/12 p-6 rounded-lg">
                   <h3>Pro</h3>
                   <p>All portfolios</p>
                   <p>AI journal suggestions</p>
                 </div>
               </div>
+            </div>
           </div>
 
-          <footer className="bg-[var(--dark-1)] ">
 
+          <footer className="bg-[var(--dark-1)] w-full my-32">
+              <p>footer</p>
           </footer>
           
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
