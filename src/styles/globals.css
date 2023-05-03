@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+}
+
+:root{
+    --gradient-color: #B5DEDB;
+    --dark-1: #164B4C;
+}
+
+.max-ch-25{
+    max-width: 26ch;
+}
+
+.custom-gradient{
+    /* background: linear-gradient(336.02deg, #164B4C 0%, #06BD9A 98.51%); */
+    background: linear-gradient(155.9deg, #164B4C 1.87%, #119B81 100%);
+}
+
+.h-min-content{
+    height:min-content
+}
