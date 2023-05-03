@@ -18,7 +18,8 @@
 }
 
 .custom-gradient{
-    background: linear-gradient(336.02deg, #164B4C 0%, #06BD9A 98.51%);
+    /* background: linear-gradient(336.02deg, #164B4C 0%, #06BD9A 98.51%); */
+    background: linear-gradient(155.9deg, #164B4C 1.87%, #119B81 100%);
 }
 
 .h-min-content{

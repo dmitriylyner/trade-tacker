@@ -226,8 +226,8 @@ const Home: NextPage = () => {
 
               <div className="flex justify-around w-4/5">
                 <div className="bg-slate-50 w-5/12 p-6 rounded-lg h-min-content">
-                  <h3>Free</h3>
-                  <ul className="my-4 space-y-3">
+                  <h3 className="text-3xl md:text-4xl">Free</h3>
+                  <ul className="my-8 space-y-6">
                     <li>
                       <IconLineUp className="inline-block" width="2rem" height="2rem"/>
                       <p className="inline-block ml-3">1 portfolio</p>
@@ -241,30 +241,32 @@ const Home: NextPage = () => {
                       <p className="inline-block ml-3">Watchlist alerts</p>
                     </li>
                   </ul>
-                  <Button to="https://create.t3.gg/en/introduction">Sign up</Button>
+                  <Button to="https://create.t3.gg/en/introduction" width="full">Sign up</Button>
 
                 </div>
                 <div className="custom-gradient w-5/12 p-6 rounded-lg h-min-content">
-                  <h3>Pro</h3>
-                  <ul className="my-4 space-y-3">
+                  <h3 className="text-3xl md:text-4xl text-slate-50 font-bold "><span className="border-b-2">Pro</span> <span className="font-normal text-2xl text-light-150 ">$20/mo</span></h3>
+                  <ul className="my-8 space-y-6">
                     <li>
                       <IconCrown className="inline-block" width="2rem" height="2rem"/> 
-                      <p className="inline-block ml-3"> All portfolios</p>
+                      <p className="inline-block ml-3 text-light-150"> All portfolios</p>
                     </li>
                     <li>
                       <IconBlocks className="inline-block" width="2rem" height="2rem"/> 
-                      <p className="inline-block ml-3">Unlimited Trades</p>
+                      <p className="inline-block ml-3 text-light-150">Unlimited Trades</p>
                     </li>
                     <li>
                       <IconDiamond className="inline-block" width="2rem" height="2rem"/> 
-                      <p className="inline-block ml-3">AI journal suggestions</p>
+                      <p className="inline-block ml-3 text-light-150">AI journal suggestions</p>
                     </li>
                     <li>
                       <IconPlay className="inline-block" width="2rem" height="2rem"/> 
-                      <p className="inline-block ml-3">First for features & updates</p>
+                      <p className="inline-block ml-3 text-light-150">First for features & updates</p>
                     </li>
                   </ul>
-                  <Button to="https://create.t3.gg/en/introduction">Try for free</Button>
+                  <Button to="https://create.t3.gg/en/introduction" width="full">
+                    Try for free
+                  </Button>
 
                 </div>
               </div>
@@ -275,7 +277,7 @@ const Home: NextPage = () => {
             <form className="px-8 pt-8 pb-12 mb-4">
               <div className="mb-4">
                 <h4 className="text-center">Woah, you made it all the way down here. <br/> Reward yourself by signing up to our awesome newsletter.</h4>
-                <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                   {/* Email */}
                 </label>
                 <input className="shadow appearance-none border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" />

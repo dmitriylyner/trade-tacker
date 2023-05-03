@@ -1,18 +1,40 @@
 import Link from "next/link";
 import React, { ReactNode } from 'react'
 
+
+type ButtonWidth = "full"
+type ButtonPos = "center"
+
 interface Props {
     children?: ReactNode | string
+    position?: ButtonPos
+    width?: ButtonWidth 
     to: string
+}
+
+const getBtnWidth = (width?: ButtonWidth) => {
+    switch(width){
+        case "full": 
+            return "block text-center"
+        default:
+            return "inline-block"
+    }
 }
 
 const Button: React.FC<Props> = ({
     to,
+    position,
+    width,
     children
 }) => {
+
+   
     return (
         <Link
-            className="inline-block shadow-md max-w-xl rounded-sm bg-main-color-400 py-4 px-12 text-slate-950 hover:bg-color-500 transition-colors"
+            className={`shadow-md max-w-xl rounded-sm bg-main-color-400 py-4 px-12 text-slate-950 hover:bg-color-500 transition-colors 
+                ${position === 'center' ? "relative left-1/2 -translate-x-2/4 " : ''}
+                ${getBtnWidth(width)}
+            `}
             href={to}
             target="_blank"
         >
@@ -33,7 +55,7 @@ export function ButtonSecondary({ children }: {children: string } ){
         </Link>
     )
 }
-
+   // ${width === 'full' ? "block text-center" : 'inline-block '}
 
 
 export default Button

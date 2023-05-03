@@ -21,7 +21,8 @@ export default {
         'main-color-400': '#06BD9A',
         'color-500': '#119B81',
         'color-600': '#186E5F',
-        'color-700': '#164B4C'
+        'color-700': '#164B4C',
+        'light-150': '#D0FbFC'
       },
       backgroundImage: {
         'main-pattern': "url('/images/main-pattern.jpg')",
