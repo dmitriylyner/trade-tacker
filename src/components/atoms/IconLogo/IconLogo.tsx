@@ -13,7 +13,7 @@ export default function IconLogo(){
                     <foreignObject x="0" y="0" width="68" height="68" clipPath="url(#clip)">
                         <div 
                             className="gradient" 
-                            xmlns="http://www.w3.org/1999/xhtml" 
+                            // xmlns="http://www.w3.org/1999/xhtml" 
                             style={{width: "68px", height: "68px", borderRadius: "50%", backgroundImage: "conic-gradient(from 180deg at 50% 50%, #164B4C 0deg, #06BD9A 360deg)"}}
                         />
                     </foreignObject>

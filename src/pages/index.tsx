@@ -86,12 +86,12 @@ const Home: NextPage = () => {
                 <li className="p-4">
                   <a
                     className="md:px-6 md:py-2 block hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
-                    href="#">Sign Up</a>
+                    href="/login">Sign Up</a>
                 </li>
                 <li className="p-4">
                   <a
                     className=" block hover:text-main-color-400 text-[var(--dark-1)] transition-colors"
-                    href="#">Log In</a>
+                    href="/login">Log In</a>
                 </li>
               </ul>
           </div>
