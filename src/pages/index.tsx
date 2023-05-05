@@ -241,7 +241,7 @@ const Home: NextPage = () => {
                       <p className="inline-block ml-3">Watchlist alerts</p>
                     </li>
                   </ul>
-                  <Button to="https://create.t3.gg/en/introduction" width="full">Sign up</Button>
+                  <Button to="/login" width="full">Sign up</Button>
 
                 </div>
                 <div className="custom-gradient w-5/12 p-6 rounded-lg h-min-content">
@@ -264,10 +264,9 @@ const Home: NextPage = () => {
                       <p className="inline-block ml-3 text-light-150">First for features & updates</p>
                     </li>
                   </ul>
-                  <Button to="https://create.t3.gg/en/introduction" width="full">
+                  <Button to="login" width="full">
                     Try for free
                   </Button>
-
                 </div>
               </div>
             </div>
