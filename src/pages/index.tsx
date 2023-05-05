@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             h-20
           "
         >
-          <IconLogo />
+          <IconLogo className="p-4"/>
 
           <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -224,8 +224,8 @@ const Home: NextPage = () => {
                   <p className="lg:max-w-prose">Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
               </div>
 
-              <div className="flex justify-around w-4/5">
-                <div className="bg-slate-50 w-5/12 p-6 rounded-lg h-min-content">
+              <div className="flex justify-around w-full flex-col lg:w-4/5 lg:flex-row">
+                <div className="bg-slate-50 w-full my-8 lg:my-0 lg:w-5/12 p-6 rounded-lg h-min-content">
                   <h3 className="text-3xl md:text-4xl">Free</h3>
                   <ul className="my-8 space-y-6">
                     <li>
@@ -244,7 +244,7 @@ const Home: NextPage = () => {
                   <Button to="/login" width="full">Sign up</Button>
 
                 </div>
-                <div className="custom-gradient w-5/12 p-6 rounded-lg h-min-content">
+                <div className="custom-gradient w-full lg:w-5/12 p-6 rounded-lg h-min-content">
                   <h3 className="text-3xl md:text-4xl text-slate-50 font-bold "><span className="border-b-2">Pro</span> <span className="font-normal text-2xl text-light-150 ">$20/mo</span></h3>
                   <ul className="my-8 space-y-6">
                     <li>

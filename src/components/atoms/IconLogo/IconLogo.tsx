@@ -1,9 +1,9 @@
 
-export default function IconLogo(){
+export default function IconLogo({className}:{className?: string}){
     return (
-        <div className="h-full flex items-center">
+        <div className={`h-full flex items-center ${className}`}>
             <a href="/">
-                <svg viewBox="0 0 216 68" width="216" height="68" className="h-12">
+                <svg viewBox="0 0 216 68" width="150" height="68" className="h-12">
                     <clipPath id="clip">
                         <path
                             id="circle4"
