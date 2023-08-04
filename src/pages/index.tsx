@@ -3,7 +3,11 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { signIn, signOut, useSession } from "next-auth/react";
-import HeroImage from '../images/hero-img-trade-tracker.png';
+import { getServerSession } from "next-auth";
+import { authOptions } from "~/server/auth";
+
+// import HeroImage from '../images/hero-img-trade-tracker.png';
+import PencilImage from '../images/pencil.png';
 import AppPreviewImg from '../images/app-preview.png';
 import IconChart from '../images/svgs/icon-chart-up.svg';
 import IconPie from '../images/svgs/icon-pie-chart.svg';
@@ -23,15 +27,15 @@ import IconLogoWhite from '~/images/svgs/icon-logo-white.svg'
 
 
 
-import { api } from "~/utils/api";
+// import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  // const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
   return (
     <>
       <Head>
-        <title>Trade Tracker</title>
+        <title>Trade Tracker - Next generation investment journal and analysis</title>
         <meta name="description" content="Trade Tracker - next generation investment journal and analysis. Boost consistency and gain insights specific to your trading style." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -78,7 +82,7 @@ const Home: NextPage = () => {
                   md:pt-0"
               >
                 <li className="p-4">
-                  <a className=" block hover:text-main-color-400 transition-colors" href="#features">Features</a>
+                  <a className="block hover:text-main-color-400 transition-colors" href="#features">Features</a>
                 </li>
                 <li className="p-4">
                   <a className=" block hover:text-main-color-400 transition-colors" href="#">Pricing</a>
@@ -100,7 +104,7 @@ const Home: NextPage = () => {
 
       <main className="-mt-20 flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-[#FFFFFF] to-[var(--gradient-color)]">
         <div className=" flex flex-col items-center justify-center w-full">
-          <div className="container flex flex-col items-center justify-center mt-40 md:flex-row md:h-screen md:mt-0 md:justify-evenly ">
+          {/* <div className="container flex flex-col items-center justify-center mt-40 md:flex-row md:h-screen md:mt-0 md:justify-evenly ">
             <div className="space-y-5 max-w-screen-sm">
               <h1 className="text-4xl font-extrabold tracking-tight text-center text-slate-950 lg:text-[5rem] md:text-left md:leading-none drop-shadow-md">
                 Track & improve your trades
@@ -113,6 +117,31 @@ const Home: NextPage = () => {
               alt='Trade Tracker Hero Image'
               className="md:max-w-xl"
             />
+          </div> */}
+
+        <div className="container md:justify-evenly md:h-screen ">
+          <div className=" flex flex-col items-center mt-40">
+              <h1 className="mb-8 text-4xl font-extrabold tracking-tight text-center text-slate-950 lg:text-[4rem] md:leading-none drop-shadow-md">
+                Track & improve your trades
+              </h1>
+              <p className="text-xl text-center mb-5">Gain consistency through data. View insights and performance of your trades over time.</p>
+              {/* <div className="absolute bg-transparent border-solid border border-back w-full h-20"/>
+              <div className="absolute bg-transparent border-solid border border-back w-full h-20"/> */}
+              <div className=" bg-white w-9/12 mt-10  mb-16 h-20 shadow-xl hero-input-borders relative">
+                  <div className="flex justify-between items-center mx-16 h-[inherit]">
+                    <p>SPY</p>
+                    <p>Opening Range breakout</p>
+                    <p>+20%</p>
+                  </div>
+                  <Image 
+                    src={PencilImage}
+                    alt='Trade Tracker Hero Image'
+                    className="md:max-w-[100px] ml-auto relative top-[-11rem] right-[-50px] z-10"
+                  />
+              </div>
+            <Button to="#features">Explore Now →</Button>
+          </div>
+
           </div>
 
           <div className='flex flex-col md:flex-row w-full' id="features">
@@ -210,22 +239,36 @@ const Home: NextPage = () => {
                 </div>
               </div>
 
-              <Image 
+              {/* <Image 
                 src={PhoneView}
                 alt='Trade Tracker Phone App View'
-              />
+              /> */}
+              <div className="grid w-1/2">
+                <div className="bg-slate-400 w-1/2">
+                  yo
+                </div>
+                <div className="bg-slate-400 w-1/2">
+                  yo
+                </div>
+                <div className="bg-slate-400 w-1/2">
+                  yo
+                </div>
+                <div className="bg-slate-400 w-1/2">
+                  yo
+                </div>
+              </div>
             </div>
           </div>
 
           <div className="px-8 w-full lg:my-32">
             <div className="flex flex-col md:flex-row lg:mx-auto lg:max-w-6xl lg:my-32">
               <div className="space-y-5">
-                  <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md">Ready to get started?</h2>
+                  <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md mt-12">Ready to get started?</h2>
                   <p className="lg:max-w-prose">Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
               </div>
 
-              <div className="flex justify-around w-full flex-col lg:w-4/5 lg:flex-row">
-                <div className="bg-slate-50 w-full my-8 lg:my-0 lg:w-5/12 p-6 rounded-lg h-min-content">
+              <div className="grid justify-around w-3/4 grid-cols-2">
+                <div className="bg-slate-50 w-[90%] justify-self-end self-center my-8 lg:my-0 p-6 rounded-lg h-min-content">
                   <h3 className="text-3xl md:text-4xl">Free</h3>
                   <ul className="my-8 space-y-6">
                     <li>
@@ -244,7 +287,7 @@ const Home: NextPage = () => {
                   <Button to="/login" width="full">Sign up</Button>
 
                 </div>
-                <div className="custom-gradient w-full lg:w-5/12 p-6 rounded-lg h-min-content">
+                <div className="custom-gradient w-full p-6 rounded-lg h-min-content">
                   <h3 className="text-3xl md:text-4xl text-slate-50 font-bold "><span className="border-b-2">Pro</span> <span className="font-normal text-2xl text-light-150 ">$20/mo</span></h3>
                   <ul className="my-8 space-y-6">
                     <li>
@@ -374,13 +417,8 @@ const Home: NextPage = () => {
               </div>
             </Link>
           </div> */}
-{/* 
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-slate-950">
-              {hello.data ? hello.data.greeting : "Loading tRPC query..."}
-            </p>
-            <AuthShowcase />
-          </div> */}
+
+
           
         </div>
       </main>
@@ -390,26 +428,28 @@ const Home: NextPage = () => {
 
 export default Home;
 
-const AuthShowcase: React.FC = () => {
-  const { data: sessionData } = useSession();
+// const AuthShowcase:React.FC = () => {
+//   const { data: sessionData } = useSession();
 
-  const { data: secretMessage } = api.example.getSecretMessage.useQuery(
-    undefined, // no input
-    { enabled: sessionData?.user !== undefined },
-  );
+//   // const session = await getServerSession(authOptions)
 
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-center text-2xl text-slate-950">
-        {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
-        {secretMessage && <span> - {secretMessage}</span>}
-      </p>
-      <button
-        className="rounded-full bg-white/10 px-10 py-3 font-semibold text-slate-950 no-underline transition hover:bg-white/20"
-        onClick={sessionData ? () => void signOut() : () => void signIn()}
-      >
-        {sessionData ? "Sign out" : "Sign in"}
-      </button>
-    </div>
-  );
-};
+//   const { data: secretMessage } = api.example.getSecretMessage.useQuery(
+//     undefined, // no input
+//     { enabled: sessionData?.user !== undefined },
+//   );
+
+//   return (
+//     <div className="flex flex-col items-center justify-center gap-4">
+//       <p className="text-center text-2xl text-slate-950">
+//         {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
+//         {secretMessage && <span> - {secretMessage}</span>}
+//       </p>
+//       <button
+//         className="rounded-full bg-white/10 px-10 py-3 font-semibold text-slate-950 no-underline transition hover:bg-white/20"
+//         onClick={sessionData ? () => void signOut() : () => void signIn()}
+//       >
+//         {sessionData ? "Sign out" : "Sign in"}
+//       </button>
+//     </div>
+//   );
+// };

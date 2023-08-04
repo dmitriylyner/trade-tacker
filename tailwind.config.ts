@@ -27,6 +27,7 @@ export default {
       backgroundImage: {
         'main-pattern': "url('/images/main-pattern.jpg')",
         'pattern-2': "url('/images/pattern-2.jpg')",
+        'dashboard-pattern': "url('/images/dashboard-nav-pattern.jpg')"
       }
     },
   },

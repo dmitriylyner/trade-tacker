@@ -1,11 +1,13 @@
 import {useState} from 'react'
 import Tabs from "~/components/molecules/Tabs"
 import IconLogo from '~/components/atoms/IconLogo'
-
+import { useRouter } from 'next/navigation'
+import SignInButton from '~/components/molecules/SignInButton/SignInButton'
 
 export default function LoginSignUp(){
 
     const [controlledValue, setControlledValue] = useState("tab1")
+    const router = useRouter();
 
     return(
             <Tabs defaultValue="tab1" value={controlledValue} onValueChange={(value) => setControlledValue(value)}>
@@ -54,6 +56,10 @@ export default function LoginSignUp(){
                             Login →
                         </button>
 
+
+                        <SignInButton />
+
+
                         <p className="text-center mt-8">
                             Don't have an account? &nbsp;
                             <button onClick={() => setControlledValue("tab2")} className="underline decoration-inherit text-color-500">
@@ -101,7 +107,8 @@ export default function LoginSignUp(){
                             />
                         </fieldset>
 
-                        <button className="mt-8 block text-center w-full shadow-md max-w-xl rounded-sm bg-main-color-400 py-4 px-12 text-slate-50 text-lg hover:bg-color-500 transition-colors ">Register →</button>
+                        <button className="mt-8 block text-center w-full shadow-md max-w-xl rounded-sm bg-main-color-400 py-4 px-12 text-slate-50 text-lg hover:bg-color-500 transition-colors " onClick={() => router.push('/dashboard/overview')}>Register →</button>
+                        
                         <p className="text-center mt-8">
                             Already have an account? &nbsp;
                             <button onClick={() => setControlledValue("tab1")} className="underline decoration-inherit text-color-500">

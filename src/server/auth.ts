@@ -4,10 +4,27 @@ import {
   type NextAuthOptions,
   type DefaultSession,
 } from "next-auth";
-import DiscordProvider from "next-auth/providers/discord";
+import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { env } from "~/env.mjs";
-import { prisma } from "~/server/db";
+import { prisma as db } from "~/server/db";
+
+
+function getGoogleCredentials(){
+  const clientId = process.env.GOOGLE_CLIENT_ID
+  const clientSecret = process.env.GOOGLE_CLIENT_SECRET
+
+  if(!clientId || clientId.length === 0){
+    throw new Error('No clientID for google provider set')
+  }
+
+  if(!clientSecret || clientSecret.length === 0){
+    throw new Error('No clientSecret for google provider set')
+  }
+
+  return { clientId, clientSecret }
+}
+
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -37,20 +54,57 @@ declare module "next-auth" {
  */
 export const authOptions: NextAuthOptions = {
   callbacks: {
-    session({ session, user }) {
-      if (session.user) {
-        session.user.id = user.id;
-        // session.user.role = user.role; <-- put other properties on the session here
+    // session({ session, user }) {
+    //   if (session.user) {
+    //     session.user.id = user.id;
+    //     // session.user.role = user.role; <-- put other properties on the session here
+    //   }
+    //   return session;
+    // },
+    async session({ token, session }) {
+      if(token){
+        session.user.id = token.id
+        session.user.name = token.name
+        session.user.email = token.email
+        session.user.image = token.picture
       }
       return session;
     },
+    async jwt({token, user}) {
+      const dbUser = await db.user.findFirst({
+        where: {
+          email: token.email,
+        }
+      })
+
+      if(!dbUser){
+        token.id = user!.id
+        return token
+      }
+
+      return {
+        id: dbUser.id,
+        name: dbUser.name,
+        email: dbUser.email,
+        picture: dbUser.image,
+      }
+    },
+    redirect(){
+      return '/dashboard/overview'
+    }
   },
-  adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(db),
+  session: {
+    strategy: 'jwt'
+  },
+  pages: {
+    signIn: '/login'
+  },
   providers: [
-    // DiscordProvider({
-    //   clientId: env.DISCORD_CLIENT_ID,
-    //   clientSecret: env.DISCORD_CLIENT_SECRET,
-    // }),
+    GoogleProvider({
+      clientId: getGoogleCredentials().clientId,
+      clientSecret: getGoogleCredentials().clientSecret
+    })
     /**
      * ...add more providers here.
      *

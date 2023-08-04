@@ -25,3 +25,24 @@
 .h-min-content{
     height:min-content
 }
+
+.hero-input-borders::before{
+    content: '';
+    position: absolute;
+    width: 110%;
+    border-top: 1px solid #BABABA;
+    border-bottom: 1px solid #BABABA;
+    top: 0;
+    left: -5%;
+    height: 5rem;
+}
+
+.hero-input-borders::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-right: 1px solid #BABABA;
+    border-left: 1px solid #BABABA;
+    top: -40%;
+    height: 180%;
+}
