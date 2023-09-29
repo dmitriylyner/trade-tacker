@@ -22,11 +22,17 @@ export default {
         'color-500': '#119B81',
         'color-600': '#186E5F',
         'color-700': '#164B4C',
-        'light-150': '#D0FbFC'
+        'light-150': '#D0FbFC',
+        'blackA5' : 'hsla(0, 100%, 0%, 35%)'
+      },
+      animation: {
+        overlayShow: 'overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        contentShow: 'contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
       backgroundImage: {
         'main-pattern': "url('/images/main-pattern.jpg')",
         'pattern-2': "url('/images/pattern-2.jpg')",
+        'dashboard-pattern': "url('/images/dashboard-nav-pattern.jpg')"
       }
     },
   },
