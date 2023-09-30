@@ -4,6 +4,8 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 import { authOptions } from "~/server/auth";
 
+// import ButtonLink from "~/components/atoms/ButtonLink"
+
 import Layout from "~/components/organisms/LandingPage/Layout";
 import HeroSection from "~/components/organisms/LandingPage/HeroSection";
 import InfoSection from "~/components/organisms/LandingPage/InfoSection";
@@ -30,6 +32,16 @@ const Home: NextPage = () => {
             {/* <Button to="/login">Try for free →</Button> */}
             <Dialog />
           </div>
+
+          {/* <div className="bg-black">
+            <ButtonLink
+                to="/#projects"
+                display="primary"
+                variant={'main'}
+            >
+                See my work
+            </ButtonLink>
+          </div> */}
 
           <InfoSection />
 

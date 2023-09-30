@@ -1,7 +1,57 @@
+import { useRef } from 'react'
 import Image from "next/image";
+import {
+    Chart as ChartJS,
+    LineElement,
+    PointElement,
+    CategoryScale,
+    LinearScale,
+    Tooltip,
+    Legend
+} from 'chart.js'
+import { Line } from 'react-chartjs-2'
+import Progress from '~/components/molecules/Progress'
 import PencilImage from '../../../../images/pencil.png';
 
+
+ChartJS.register(
+    LineElement,
+    PointElement,
+    CategoryScale,
+    LinearScale,
+    Tooltip,
+    Legend
+)
+
 function HeroSection(){
+
+    // let dummyData = [
+    //     [0,10],
+    //     [5, 50],
+    //     [15, 75],
+    //     [55, 100],
+    //     [75, 10],
+    //     [100, 5]
+    // ]
+
+    // let line = d3.line()
+    // let result = line(dummyData as any)
+    // console.log(result)
+
+    // const svgRef = useRef<SVGSVGElement | null>(null)
+
+    const data = {
+        labels: ['mon', 'tues', 'wed'],
+        datasets: [{
+            label: 'wekkdays',
+            data: [30, 33, 66],
+            borderColor: 'aqua',
+            tension: 0.4
+        }]
+    }
+
+    const options = {}
+
     return (
         <section className="container md:justify-evenly h-[80vh] max-h-[500px]">
             <div className=" flex flex-col items-center mt-40 px-4 ">
@@ -15,7 +65,24 @@ function HeroSection(){
                     <div className="flex justify-between items-center mx-16 h-[inherit]">
                     <p>SPY</p>
                     <p>Opening Range breakout</p>
-                    <p>+20%</p>
+
+                    {/* <svg ref={svgRef}>
+                        <path d={result} />
+                    </svg> */}
+
+                    <div className="w-2/3">
+                        <Line
+                            data={data}
+                            options={options}
+                        
+                        >
+
+                        </Line>
+                    </div>
+
+
+                    <Progress />
+                    <p className="text-xl font-bold">+20%</p>
                     </div>
                     <Image 
                     src={PencilImage}
