@@ -47,8 +47,15 @@ To develop all apps and packages, run the following command:
 
 ```
 cd my-turborepo
-pnpm dev
+npm run dev
 ```
+
+To run individual app:
+```
+npm run web
+npm run marketing
+```
+scrip is short for specific workspace ```npm run dev -w=web ```
 
 ### Remote Caching
 

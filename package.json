@@ -4,7 +4,9 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "web": "npm run dev -w=web",
+    "marketing": "npm run dev -w=marketing"
   },
   "devDependencies": {
     "eslint": "^8.48.0",

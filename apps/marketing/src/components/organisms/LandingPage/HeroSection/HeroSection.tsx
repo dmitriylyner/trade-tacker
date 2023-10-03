@@ -1,27 +1,27 @@
 import { useRef } from 'react'
 import Image from "next/image";
-import {
-    Chart as ChartJS,
-    LineElement,
-    PointElement,
-    CategoryScale,
-    LinearScale,
-    Tooltip,
-    Legend
-} from 'chart.js'
+// import {
+//     Chart as ChartJS,
+//     LineElement,
+//     PointElement,
+//     CategoryScale,
+//     LinearScale,
+//     Tooltip,
+//     Legend
+// } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 import Progress from '~/components/molecules/Progress'
 import PencilImage from '../../../../images/pencil.png';
 
 
-ChartJS.register(
-    LineElement,
-    PointElement,
-    CategoryScale,
-    LinearScale,
-    Tooltip,
-    Legend
-)
+// ChartJS.register(
+//     LineElement,
+//     PointElement,
+//     CategoryScale,
+//     LinearScale,
+//     Tooltip,
+//     Legend
+// )
 
 function HeroSection(){
 
@@ -40,15 +40,15 @@ function HeroSection(){
 
     // const svgRef = useRef<SVGSVGElement | null>(null)
 
-    const data = {
-        labels: ['mon', 'tues', 'wed'],
-        datasets: [{
-            label: 'wekkdays',
-            data: [30, 33, 66],
-            borderColor: 'aqua',
-            tension: 0.4
-        }]
-    }
+    // const data = {
+    //     labels: ['mon', 'tues', 'wed'],
+    //     datasets: [{
+    //         label: 'wekkdays',
+    //         data: [30, 33, 66],
+    //         borderColor: 'aqua',
+    //         tension: 0.4
+    //     }]
+    // }
 
     const options = {}
 
@@ -63,14 +63,14 @@ function HeroSection(){
                 <div className="absolute bg-transparent border-solid border border-back w-full h-20"/> */}
                 <div className=" bg-white w-[95%] md:w-9/12 mt-10  mb-16 h-20 shadow-xl hero-input-borders relative">
                     <div className="flex justify-between items-center mx-16 h-[inherit]">
-                    <p>SPY</p>
+                    <p>$SPY</p>
                     <p>Opening Range breakout</p>
 
                     {/* <svg ref={svgRef}>
                         <path d={result} />
                     </svg> */}
 
-                    <div className="w-2/3">
+                    {/* <div className="w-2/3">
                         <Line
                             data={data}
                             options={options}
@@ -78,7 +78,7 @@ function HeroSection(){
                         >
 
                         </Line>
-                    </div>
+                    </div> */}
 
 
                     <Progress />
