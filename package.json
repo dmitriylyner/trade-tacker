@@ -1,58 +1,21 @@
 {
-  "name": "trade-tracker",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "postinstall": "prisma generate",
-    "lint": "next lint",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@next-auth/prisma-adapter": "^1.0.6",
-    "@prisma/client": "^4.13.0",
-    "@radix-ui/react-dialog": "^1.0.5",
-    "@radix-ui/react-progress": "^1.0.3",
-    "@radix-ui/react-tabs": "^1.0.3",
-    "@radix-ui/react-visually-hidden": "^1.0.3",
-    "@tanstack/react-query": "^4.29.5",
-    "@trpc/client": "^10.25.0",
-    "@trpc/next": "^10.25.0",
-    "@trpc/react-query": "^10.25.0",
-    "@trpc/server": "^10.25.0",
-    "chart.js": "^4.4.0",
-    "class-variance-authority": "^0.7.0",
-    "framer-motion": "^10.15.0",
-    "next": "^13.4.1",
-    "next-auth": "^4.22.1",
-    "react": "18.2.0",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "18.2.0",
-    "superjson": "1.12.3",
-    "tailwind-merge": "^1.14.0",
-    "zod": "^3.21.4"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@svgr/webpack": "^7.0.0",
-    "@types/eslint": "^8.37.0",
-    "@types/node": "^18.15.5",
-    "@types/prettier": "^2.7.2",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "@typescript-eslint/eslint-plugin": "^5.59.2",
-    "@typescript-eslint/parser": "^5.59.2",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.40.0",
-    "eslint-config-next": "^13.4.1",
-    "postcss": "^8.4.23",
-    "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.6",
-    "prisma": "^4.13.0",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4"
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "tsconfig": "*",
+    "turbo": "latest"
   },
-  "ct3aMetadata": {
-    "initVersion": "7.10.1"
-  }
+  "name": "trade-tracker-monorepo",
+  "packageManager": "npm@9.5.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }
