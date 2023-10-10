@@ -10,7 +10,7 @@ import Button from '~/components/atoms/Button'
 
 function PlanSection(){
     return (
-        <section className="px-8 w-full lg:my-32">
+        <section className="px-8 w-full lg:my-32" id="plans">
             <div className="flex flex-col md:flex-row lg:mx-auto lg:max-w-6xl lg:my-32">
                 <div className="space-y-5">
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md mt-12">Ready to get started?</h2>

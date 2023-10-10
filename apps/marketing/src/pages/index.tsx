@@ -1,8 +1,8 @@
 import { type NextPage } from "next";
-import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
-import { getServerSession } from "next-auth";
-import { authOptions } from "~/server/auth";
+// import Link from "next/link";
+// import { signIn, signOut, useSession } from "next-auth/react";
+// import { getServerSession } from "next-auth";
+// import { authOptions } from "~/server/auth";
 
 // import ButtonLink from "~/components/atoms/ButtonLink"
 
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             
           <HeroSection />
 
-          <div className="sticky top-10 z-20 h-[20vh] max-h-[300px]">
+          <div className="sticky top-10 z-20 h-[28vh] max-h-[300px]">
             {/* <Button to="/login">Try for free →</Button> */}
             <Dialog />
           </div>

@@ -20,7 +20,7 @@ export default {
         'color-250': '#CBE9D5',
         'color-300': '#0FEBC3',
         'main-color-400': '#06BD9A',
-        'color-500': '#119B81',
+        'color-500': '#00A887',
         'color-600': '#186E5F',
         'color-700': '#164B4C',
         'light-150': '#D0FbFC',

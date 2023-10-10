@@ -1,6 +1,7 @@
 // import Nav from '@/components/organisms/Nav/Nav.component'
 // import Footer from '@/components/organisms/Footer/Footer.component'
 import Head from "next/head";
+import Link from "next/link";
 import IconLogo from '~/components/atoms/IconLogo'
 import IconLogoWhite from '~/images/svgs/icon-logo-white.svg'
 
@@ -74,9 +75,9 @@ export default function RootLayout({
                         href="/login">Sign Up</a>
                     </li>
                     <li className="p-4">
-                    <a
+                    <Link
                         className=" block hover:text-main-color-400 text-[var(--dark-1)] transition-colors"
-                        href="/login">Log In</a>
+                        href="/login">Log In</Link>
                     </li>
                 </ul>
             </div>
@@ -141,9 +142,9 @@ export default function RootLayout({
                       href="#">Sign Up</a>
                   </li>
                   <li className="p-4">
-                    <a
+                    <Link
                       className=" block text-slate-50 hover:text-main-color-400 text-[var(--dark-1)] transition-colors"
-                      href="#">Log In</a>
+                      href="#">Log In</Link>
                   </li>
                 </ul>
               </div>

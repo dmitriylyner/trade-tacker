@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Tabs from "~/components/molecules/Tabs"
 import IconLogo from '~/components/atoms/IconLogo'
 import { useRouter } from 'next/navigation'
-import SignInButton from '~/components/molecules/SignInButton/SignInButton'
+// import SignInButton from '~/components/molecules/SignInButton/SignInButton'
 
 export default function LoginSignUp(){
 
@@ -57,11 +57,11 @@ export default function LoginSignUp(){
                         </button>
 
 
-                        <SignInButton />
+                        {/* <SignInButton /> */}
 
 
                         <p className="text-center mt-8">
-                            Don't have an account? &nbsp;
+                            Don&apos;t have an account? &nbsp;
                             <button onClick={() => setControlledValue("tab2")} className="underline decoration-inherit text-color-500">
                                 Sign up here
                             </button>
@@ -72,7 +72,7 @@ export default function LoginSignUp(){
                 <Tabs.Content value="tab2">
                     <section className="mt-4">
                         <h1 className="text-2xl">Create Account</h1>
-                        <p className="mb-4 text-gray-600">Let's get started with your 30 day free trial.</p>                    
+                        <p className="mb-4 text-gray-600">Let&apos;s get started with your 30 day free trial.</p>                    
                         <fieldset className="Fieldset mb-2">
                             <label className="Label" htmlFor="Name">
                             Name

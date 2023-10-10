@@ -1,7 +1,8 @@
 // import Nav from '@/components/organisms/Nav/Nav.component'
 // import Footer from '@/components/organisms/Footer/Footer.component'
 import Head from "next/head";
-import IconLogo from '~/components/atoms/IconLogo'
+import Link from "next/link";
+import Nav from "~/components/molecules/Nav";
 import IconLogoWhite from '~/images/svgs/icon-logo-white.svg'
 
 
@@ -21,66 +22,7 @@ export default function RootLayout({
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <header>
-            <nav
-                className="
-                    flex flex-wrap
-                    items-center
-                    justify-between
-                    w-full
-                    px-4
-                    text-lg text-gray-700
-                    relative
-                    z-10
-                    h-20
-                "
-                >
-            <IconLogo className="p-4"/>
-
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                id="menu-button"
-                className="h-6 w-6 cursor-pointer md:hidden block"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                >
-                <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-                />
-            </svg>
-            
-            <div className="hidden w-full md:flex md:items-center md:w-auto" id="menu">
-                <ul
-                    className="
-                    pt-4
-                    text-base text-gray-700
-                    md:flex
-                    items-center
-                    md:justify-between 
-                    md:pt-0"
-                >
-                    <li className="p-4">
-                    <a className="block hover:text-main-color-400 transition-colors" href="#features">Features</a>
-                    </li>
-                    <li className="p-4">
-                    <a className=" block hover:text-main-color-400 transition-colors" href="#">Pricing</a>
-                    </li>
-                    <li className="p-4">
-                    <a
-                        className="md:px-6 md:py-2 block hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
-                        href="/login">Sign Up</a>
-                    </li>
-                    <li className="p-4">
-                    <a
-                        className=" block hover:text-main-color-400 text-[var(--dark-1)] transition-colors"
-                        href="/login">Log In</a>
-                    </li>
-                </ul>
-            </div>
-            </nav>
+            <Nav />
         </header>
           {children}
         {/* <Footer /> */}
@@ -141,9 +83,9 @@ export default function RootLayout({
                       href="#">Sign Up</a>
                   </li>
                   <li className="p-4">
-                    <a
+                    <Link
                       className=" block text-slate-50 hover:text-main-color-400 text-[var(--dark-1)] transition-colors"
-                      href="#">Log In</a>
+                      href="#">Log In</Link>
                   </li>
                 </ul>
               </div>
