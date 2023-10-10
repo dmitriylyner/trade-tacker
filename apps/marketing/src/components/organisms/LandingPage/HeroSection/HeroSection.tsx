@@ -62,7 +62,7 @@ function HeroSection(){
                 <p className="text-xl text-center mb-5">Gain consistency through data. View insights and performance of your trades over time.</p>
                 {/* <div className="absolute bg-transparent border-solid border border-back w-full h-20"/>
                 <div className="absolute bg-transparent border-solid border border-back w-full h-20"/> */}
-                <div className=" bg-white w-[95%] md:w-9/12 mt-10  mb-16 h-20 shadow-xl hero-input-borders relative">
+                <div className=" bg-white w-[95%] lg:w-[110%] mt-10  mb-16  h-14 md:h-20 shadow-xl hero-input-borders relative">
                     <div className="flex justify-between items-center mx-16 h-[inherit]">
                     <p style={{color: '#6C6C6C'}}>$<span style={{fontWeight:'bold'}}>SPY</span></p>
                     <p style={{color: '#6C6C6C'}} className="hidden md:inline">Opening Range breakout</p>
