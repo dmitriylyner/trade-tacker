@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import IconLogo from '~/components/atoms/IconLogo'
 import Link from "next/link";
+import DialogNav from '~/components/molecules/DialogNav'
+
 
 export default function Nav(){
 
@@ -12,11 +14,11 @@ export default function Nav(){
 
     return (
         <>
-            <button className="fixed z-20 top-5 right-5 flex-col justify-center items-center lg:hidden flex mt-5 ml-5" onClick={handleClick}>
+            {/* <button className="fixed z-20 top-5 right-5 flex-col justify-center items-center lg:hidden flex mt-5 ml-5" onClick={handleClick}>
                 <span className={`bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
                 <span className={`bg-black  block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
                 <span className={`bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm translate-y-0.5 ${isOpen ? '-rotate-45 translate-y-1' : 'translate-y-0.5'}`}></span>
-            </button>
+            </button> */}
                 <nav
                     className="
                             flex flex-wrap
@@ -47,6 +49,15 @@ export default function Nav(){
                         d="M4 6h16M4 12h16M4 18h16"
                         />
                     </svg> */}
+
+                    <div className='flex gap-5 md:hidden'>
+                        <DialogNav />
+                        <Link
+                            className="px-6 py-2 block  text-base hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
+                            href="/login">Sign Up →
+                        </Link>
+                    </div>
+
                     
                     <div className={`md:flex flex-grow w-full md:items-center md:w-auto sm:w-auto sm:items-center sm:justify-end ${isOpen ? 'flex bg-black/75' : 'hidden'}`} id="menu">
                     {/* <div className="hidden w-full md:flex md:items-center md:w-auto" id="menu"> */}
@@ -68,7 +79,7 @@ export default function Nav(){
                             <li className="p-4">
                             <Link
                                 className="md:px-6 md:py-2 block hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
-                                href="/login">Sign Up</Link>
+                                href="/login">Sign Up →</Link>
                             </li>
                             <li className="p-4">
                             <a

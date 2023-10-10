@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AppPreviewImg from '../../../../images/app-preview.png';
+import AppPreviewImg from '../../../../images/app-preview-2.png';
 import IconChart from '../../../../images/svgs/icon-chart-up.svg';
 import IconPie from '../../../../images/svgs/icon-pie-chart.svg';
 import IconClipboard from '../../../../images/svgs/icon-clipboard.svg';
@@ -13,7 +13,7 @@ function DetailsSection(){
                 <Image 
                 src={AppPreviewImg}
                 alt='Trade Tracker App Preview'
-                className="relative z-10"
+                className="relative z-10 max-w-[85%] m-auto"
                 />
 
             </div>

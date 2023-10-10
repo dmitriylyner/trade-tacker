@@ -54,12 +54,12 @@ function HeroSection(){
     const options = {}
 
     return (
-        <section className=" md:justify-evenly h-[80vh] max-h-[500px]">
+        <section className=" md:justify-evenly h-[80vh] max-h-[500px] ">
             <div className=" flex flex-col items-center mt-40 px-4 ">
-                <h1 className="mb-8 text-4xl font-extrabold tracking-tight text-center text-slate-950 lg:text-[4rem] md:leading-none drop-shadow-md">
+                <h1 className="text-balance mb-8 text-4xl font-extrabold tracking-tight text-center text-slate-950 lg:text-[4rem] md:leading-none drop-shadow-md">
                 Track & improve your trades
                 </h1>
-                <p className="text-xl text-center mb-5">Gain consistency through data. View insights and performance of your trades over time.</p>
+                <p className="text-xl text-center mb-5 text-balance">Gain consistency through data. View insights and performance of your trades over time.</p>
                 {/* <div className="absolute bg-transparent border-solid border border-back w-full h-20"/>
                 <div className="absolute bg-transparent border-solid border border-back w-full h-20"/> */}
                 <div className=" bg-white w-[95%] lg:w-[110%] mt-10  mb-16  h-14 md:h-20 shadow-xl hero-input-borders relative">
@@ -96,7 +96,7 @@ function HeroSection(){
                     <Image 
                     src={PencilImage}
                     alt='Trade Tracker Hero Image'
-                    className="max-w-[80px] md:max-w-[100px] ml-auto relative top-[-11rem] md:right-[-50px] z-10"
+                    className="max-w-[60px] md:max-w-[100px] ml-auto relative top-[-7rem] md:top-[-11rem] md:right-[-50px] z-10"
                     />
                 </div>
             </div>
