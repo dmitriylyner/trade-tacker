@@ -9,7 +9,7 @@ export const buttonVariants = cva(
         variants: {
             variant: {
                 default: "btn-animate  bg-color-500 font-bold",
-                main: "btn-animate after:border-r-color-300 after:border-b-color-300 border-color-white ",
+                main: " bg-color-500 btn-animate ",
                 whiteMain: "btn-animate-lg text-lg md:w-3/4 w-full mr-4 md:ml-4 after:border-r-color-400 after:border-r-2 after:border-b-2 border-2 after:border-b-color-400 border-color-400 text-color-400",
                 whiteMainLarge: "btn-animate-lg mx-6 md:mx-[unset] xl:px-24  md:text-xl lg:text-2xl after:border-r-color-400 after:border-r-[3px] after:border-b-[3px] border-[3px] after:border-b-color-400 border-color-400 text-color-400",
                 whiteMainSmall: "btn-animate-sm mx-16 md:mx-[unset] xl:px-10 xl:py-3 after:border-r-color-400 after:border-r-2 after:border-b-2 border-2 after:border-b-color-400 border-color-400 text-color-400"
@@ -41,7 +41,7 @@ interface ExternalBtnProps extends ButtonProps {
 const getBtnDisplay = (display?: ButtonDisplay) => {
     switch(display){
         case "primary": 
-            return "block text-center"
+            return "block sm:inline-block text-center"
         case "secondary": 
             return "block text-center"
         default:

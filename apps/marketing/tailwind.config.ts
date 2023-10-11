@@ -6,7 +6,7 @@ export default {
     container: {
          // default breakpoints but with 40px removed
          screens: {
-          sm: '600px',
+          sm: '480px',
           md: '768px',
           lg: '984px',
           xl: '1240px',
@@ -20,7 +20,7 @@ export default {
         'color-250': '#CBE9D5',
         'color-300': '#0FEBC3',
         'main-color-400': '#06BD9A',
-        'color-500': '#00A887',
+        'color-500': '#119B81', //'#00A887',
         'color-600': '#186E5F',
         'color-700': '#164B4C',
         'light-150': '#D0FbFC',
@@ -34,6 +34,12 @@ export default {
         'main-pattern': "url('/images/main-pattern.jpg')",
         'pattern-2': "url('/images/pattern-2.jpg')",
         'dashboard-pattern': "url('/images/dashboard-nav-pattern.jpg')"
+      },
+      maxWidth: {
+        'maximum': '1520px'
+      },
+      minWIdth: {
+        'minimum': '340px'
       }
     },
   },

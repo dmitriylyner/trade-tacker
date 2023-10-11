@@ -38,6 +38,9 @@ export default function RootLayout({
               px-16
               text-lg text-gray-700
               relative
+              max-w-minimum
+              max-w-maximum
+              m-auto
             "
           >
             <div className="my-16">

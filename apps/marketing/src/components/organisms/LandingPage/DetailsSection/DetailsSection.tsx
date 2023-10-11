@@ -19,7 +19,7 @@ function DetailsSection(){
             </div>
 
             <section className="bg-pattern-2 bg-cover w-full -mt-48">
-                <div id="why-trade-tracker" className=" text-slate-50 mx-12 md:mx-36 lg:mx-auto lg:max-w-6xl my-32">
+                <div id="why-trade-tracker" className=" text-slate-50 mx-12 lg:mx-36 xl:mx-auto lg:max-w-6xl my-32">
                 <div className="pt-36">
                     <h3 className="text-2xl">Why Trade Tracker?</h3>
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md">Habit and performance</h2>
@@ -51,7 +51,7 @@ function DetailsSection(){
                     </div>
                 </div> */}
 
-                <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-8 py-16 md:grid-flow-col-dense">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:grid-cols-4 md:gap-8 py-16 md:grid-flow-col-dense">
                     <div className="my-2">
                     <IconChart className='text-6xl'/>
                     <h4 className="font-bold my-2 drop-shadow-md leading-7">Customizable charts</h4>

@@ -30,6 +30,8 @@ export default function Nav(){
                             relative
                             z-10
                             h-20
+                            max-w-maximum min-w-minimum
+                            m-auto
                         "
                         >
                     <IconLogo className="p-4"/>

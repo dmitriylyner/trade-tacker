@@ -58,7 +58,7 @@ const Home: NextPage = () => {
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                   {/* Email */}
                 </label>
-                <input className="shadow appearance-none border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" />
+                <input className="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" />
               </div>
             </form>
           </div>
