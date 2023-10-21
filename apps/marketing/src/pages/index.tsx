@@ -1,5 +1,5 @@
 import { type NextPage } from "next";
-// import Link from "next/link";
+import Link from "next/link";
 // import { signIn, signOut, useSession } from "next-auth/react";
 // import { getServerSession } from "next-auth";
 // import { authOptions } from "~/server/auth";
@@ -13,13 +13,17 @@ import DetailsSection from "~/components/organisms/LandingPage/DetailsSection";
 import ProgressSection from "~/components/organisms/LandingPage/ProgressSection";
 import PlanSection from "~/components/organisms/LandingPage/PlanSection";
 // import HeroImage from '../images/hero-img-trade-tracker.png';
+import { buttonVariants } from "~/components/atoms/ButtonLink"
 
 import Dialog from '~/components/molecules/Dialog'
+
+// import { useRouter } from 'next/navigation'
 
 // import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  // const router = useRouter()
 
   return (
     <Layout>
@@ -30,6 +34,12 @@ const Home: NextPage = () => {
 
           <div className="sticky top-10 z-20 h-[28vh] max-h-[300px]">
             {/* <Button to="/login">Try for free →</Button> */}
+            <Link className={buttonVariants({variant: 'default'})} href="/?join=true" scroll={false}>
+                Try for Free →
+            </Link>
+              {/* <button className={buttonVariants({variant: 'default'})} onClick={() => router.push("?join=true")}>
+                Try for Free →
+              </button> */}
             <Dialog />
           </div>
 

@@ -34,11 +34,13 @@ function PlanSection(){
                         <p className="inline-block ml-3">Watchlist alerts</p>
                         </li>
                     </ul>
-                    <ButtonLink to="/login" display="primary" variant={'main'}>Sign up</ButtonLink>
+                    <ButtonLink to="/?join=true" display="primary" variant={'main'} scroll={false}>Sign up</ButtonLink>
 
                     </div>
                     <div className="custom-gradient w-full p-6 rounded-lg h-min-content">
-                    <h3 className="text-3xl md:text-4xl text-slate-50 font-bold "><span className="border-b-2">Pro</span> <span className="font-normal text-2xl text-light-150 ">$20/mo</span></h3>
+                    <h3 className="text-3xl md:text-4xl text-slate-50 font-bold "><span className="border-b-2">Pro</span> 
+                    {/* <span className="font-normal text-2xl text-light-150 ">$20/mo</span> */}
+                    </h3>
                     <ul className="my-8 space-y-6">
                         <li>
                         <IconCrown className="inline-block" width="2rem" height="2rem"/> 
@@ -57,7 +59,7 @@ function PlanSection(){
                         <p className="inline-block ml-3 text-light-150">First for features & updates</p>
                         </li>
                     </ul>
-                    <ButtonLink to="/login" display="primary" variant={'main'}>Try for free</ButtonLink>
+                    <ButtonLink to="/?join=true" display="primary" variant={'main'} scroll={false}>Try for free</ButtonLink>
                     </div>
                 </div>
             </div>

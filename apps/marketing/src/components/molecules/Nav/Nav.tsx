@@ -56,7 +56,7 @@ export default function Nav(){
                         <DialogNav />
                         <Link
                             className="px-6 py-2 block  text-base hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
-                            href="/login">Sign Up →
+                            href="/?join=true">Sign Up →
                         </Link>
                     </div>
 
@@ -81,7 +81,7 @@ export default function Nav(){
                             <li className="p-4">
                             <Link
                                 className="md:px-6 md:py-2 block hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
-                                href="/login">Sign Up →</Link>
+                                href="/?join=true">Sign Up →</Link>
                             </li>
                             <li className="p-4">
                             <a
