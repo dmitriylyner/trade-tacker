@@ -12,6 +12,7 @@ import InfoSection from "~/components/organisms/LandingPage/InfoSection";
 import DetailsSection from "~/components/organisms/LandingPage/DetailsSection";
 import ProgressSection from "~/components/organisms/LandingPage/ProgressSection";
 import PlanSection from "~/components/organisms/LandingPage/PlanSection";
+import ContactForm from "~/components/molecules/ContactForm";
 // import HeroImage from '../images/hero-img-trade-tracker.png';
 import { buttonVariants } from "~/components/atoms/ButtonLink"
 
@@ -62,15 +63,7 @@ const Home: NextPage = () => {
           <PlanSection />
 
           <div>
-            <form className="px-8 pt-8 pb-12 mb-20">
-              <div className="mb-4">
-                <h4 className="text-center leading-7 mb-8">Woah, you made it all the way down here. <br/> Reward yourself by signing up to our awesome newsletter.</h4>
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                  {/* Email */}
-                </label>
-                <input className="shadow appearance-none border rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" />
-              </div>
-            </form>
+            <ContactForm />
           </div>
           
           {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">

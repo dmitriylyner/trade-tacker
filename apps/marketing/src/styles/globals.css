@@ -47,6 +47,21 @@
   height: 180%;
 }
 
+span.underline{
+  text-decoration: none;
+  line-height: 1.5;
+  background-repeat: no-repeat;
+  background-size: 100% 4%;
+  background-position: 0 100%;
+  background-image: linear-gradient(0deg, #119B81, #119B81);
+  padding-bottom: 2px;
+  transition: all 0.5s ease;
+  transition-property: background-size;
+}
+
+span.underline:hover{
+  background-size: 50% 4%;
+}
 
 @keyframes overlayShow {
     from {

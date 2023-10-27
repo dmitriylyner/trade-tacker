@@ -34,7 +34,7 @@ function PlanSection(){
                         <p className="inline-block ml-3">Watchlist alerts</p>
                         </li>
                     </ul>
-                    <ButtonLink to="/?join=true" display="primary" variant={'main'} scroll={false}>Sign up</ButtonLink>
+                    <ButtonLink to="/?join=true" display="secondary" variant={'main'} scroll={false}>Sign up</ButtonLink>
 
                     </div>
                     <div className="custom-gradient w-full p-6 rounded-lg h-min-content">
@@ -59,7 +59,7 @@ function PlanSection(){
                         <p className="inline-block ml-3 text-light-150">First for features & updates</p>
                         </li>
                     </ul>
-                    <ButtonLink to="/?join=true" display="primary" variant={'main'} scroll={false}>Try for free</ButtonLink>
+                    <ButtonLink to="/?join=true" display="secondary" variant={'mainWhite'} scroll={false}>Try for free</ButtonLink>
                     </div>
                 </div>
             </div>

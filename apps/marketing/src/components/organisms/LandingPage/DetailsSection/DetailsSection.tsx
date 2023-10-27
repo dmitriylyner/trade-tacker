@@ -18,11 +18,11 @@ function DetailsSection(){
 
             </div>
 
-            <section className="bg-pattern-2 bg-cover w-full -mt-48">
+            <section className="bg-pattern-3 bg-cover w-full -mt-48">
                 <div id="why-trade-tracker" className=" text-slate-50 mx-12 lg:mx-36 xl:mx-auto lg:max-w-6xl my-32">
                 <div className="pt-36">
-                    <h3 className="text-2xl">Why Trade Tracker?</h3>
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md">Habit and performance</h2>
+                    <h3 className="text-2xl text-[#07F2C7]">Why Trade Tracker?</h3>
+                    <h2 className="text-4xl md:text-5xl font-bold drop-shadow-md">Habit and performance</h2>
                 </div>
 
                 {/* <div className="flex py-16 align-items justify-between">
