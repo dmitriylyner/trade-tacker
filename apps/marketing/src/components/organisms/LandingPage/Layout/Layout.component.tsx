@@ -1,6 +1,6 @@
 // import Nav from '@/components/organisms/Nav/Nav.component'
 // import Footer from '@/components/organisms/Footer/Footer.component'
-import Head from "next/head";
+import { NextSeo } from 'next-seo'
 import Link from "next/link";
 import Nav from "~/components/molecules/Nav";
 import IconLogoWhite from '~/images/svgs/icon-logo-white.svg'
@@ -16,11 +16,10 @@ export default function RootLayout({
   return (
     <>
         {/* <Nav classNames='bg-transparent' baseUrl="."/> */}
-        <Head>
-            <title>Trade Tracker - Next generation investment journal and analysis</title>
-            <meta name="description" content="Trade Tracker - next generation investment journal and analysis. Boost consistency and gain insights specific to your trading style." />
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <NextSeo
+          title={`Trade Tracker - Next generation investment journal and analysis`}
+          description="Trade Tracker - next generation investment journal and analysis. Boost consistency and gain insights specific to your trading style."
+        />
         <header>
             <Nav />
         </header>
