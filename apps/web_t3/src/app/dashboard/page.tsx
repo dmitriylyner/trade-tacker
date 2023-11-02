@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import type { Metadata } from 'next'
 
-interface pageProps {
+// interface pageProps {
 
-}
+// }
 
-const page: FC<pageProps> = ({}) => {
+const page: FC = ({}) => {
     return <div>index overview page</div>
 }
 
