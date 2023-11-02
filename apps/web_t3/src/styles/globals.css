@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+}
+
+:root{
+    --gradient-color: #B5DEDB;
+    --dark-1: #164B4C;
+}
+
+.max-ch-25{
+    max-width: 26ch;
+}
+
+.custom-gradient{
+    /* background: linear-gradient(336.02deg, #164B4C 0%, #06BD9A 98.51%); */
+    background: linear-gradient(155.9deg, #164B4C 1.87%, #119B81 100%);
+}
+
+.h-min-content{
+    height:min-content
+}
+
+.hero-input-borders::before{
+    content: '';
+    position: absolute;
+    width: 110%;
+    border-top: 1px solid #BABABA;
+    border-bottom: 1px solid #BABABA;
+    top: 0;
+    left: -5%;
+    height: 5rem;
+}
+
+
+@keyframes overlayShow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes contentShow {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+
+.hero-input-borders::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-right: 1px solid #BABABA;
+    border-left: 1px solid #BABABA;
+    top: -40%;
+    height: 180%;
+}

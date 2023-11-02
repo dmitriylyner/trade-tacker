@@ -1,8 +1,14 @@
-# Turborepo starter
+# Status
 
-This is an official starter Turborepo.
+🚧 In Development 🚧
 
-## Using this example
+Trade Tracker is currently early in the development cycle. This app is not yet functional but is being actively developed. Please "watch" the project and leave a star to get all updates.
+
+
+## Description
+Trade Tracker is a next generation stock journal and analysis tool that allows you to review and improve your trades in financial markets. Trade Tracker was built to empower individual retail traders to gain personal insights on trading psychology, discipline, and trends that help them become consistent. 
+
+## Features
 
 Run the following command:
 
