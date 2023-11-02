@@ -20,9 +20,9 @@ function AnimatedNumbers({
     }, [isInView, value, motionValue])
 
     useEffect(() => {
-        springValue.on("change", (latest: number) => {
-            if(ref.current && Number(latest.toFixed(0)) <= value){
-                ref.current.textContent = `${latest?.toFixed(0)}%`
+        springValue.on("change", (latest) => {
+            if(ref.current && latest.toFixed(0) <= value){
+                ref.current.textContent = `${latest.toFixed(0)}%`
             }
         })
     })

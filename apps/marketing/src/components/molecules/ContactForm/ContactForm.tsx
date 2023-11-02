@@ -7,7 +7,7 @@ export default function ContactForm() {
     const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || '');
 
     return (
-        <form onSubmit={handleSubmit} className="px-8 pt-8 pb-12 mb-20">
+        <form onSubmit={(event) => void handleSubmit(event)} className="px-8 pt-8 pb-12 mb-20">
             <div className="mb-4">
             <h4 className="text-center leading-7 mb-8">Woah, you made it all the way down here. <br/> Reward yourself by signing up to our awesome newsletter.</h4>
 

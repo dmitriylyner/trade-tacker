@@ -33,9 +33,9 @@ const Home: NextPage = () => {
             
           <HeroSection />
 
-          <div className="sticky top-10 z-20 h-[28vh] max-h-[300px]">
+          <div className="sticky top-10 z-20 pb-[24vh] max-h-[300px]" style={{pointerEvents: 'none'}}>
             {/* <Button to="/login">Try for free →</Button> */}
-            <Link className={buttonVariants({variant: 'default'})} href="/?join=true" scroll={false}>
+            <Link className={buttonVariants({variant: 'default'})} href="/?join=true" scroll={false} style={{pointerEvents: 'auto'}}>
                 Try for Free →
             </Link>
               {/* <button className={buttonVariants({variant: 'default'})} onClick={() => router.push("?join=true")}>

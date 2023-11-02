@@ -87,7 +87,7 @@ const DialogNav = () => (
                             <li className="p-4">
                             <Link
                                 className="px-6 py-4 block hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
-                                href="/login">Sign Up</Link>
+                                href="/?join=true">Sign Up</Link>
                             </li>
                             <li className="p-4">
                             <a

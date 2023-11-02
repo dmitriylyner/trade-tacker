@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -16,10 +20,13 @@
 
   --glow-conic: conic-gradient(
     from 180deg at 50% 50%,
-    #2a8af6 0deg,
-    #a853ba 180deg,
-    #e92a67 360deg
+    #164C49 0deg,
+    #4fd0b9 180deg,
+    #06BD9A 360deg
   );
+
+  --gradient-color: #B5DEDB;
+  --dark-1: #164B4C;
 }
 
 * {
@@ -32,9 +39,10 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  max-height: 100vh;
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -42,9 +50,29 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+
+.background-animate {
+  background-size: 400%;
+  
+  background-position: 100% 50%;
+  -webkit-animation: AnimationName 25s ease infinite;
+  -moz-animation: AnimationName 25s ease infinite;
+  animation: AnimationName 25s ease infinite; 
+}
+
+@keyframes AnimationName {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }

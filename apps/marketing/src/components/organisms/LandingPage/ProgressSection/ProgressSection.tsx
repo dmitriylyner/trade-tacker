@@ -17,7 +17,7 @@ function ProgressSection(){
                 <div >
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md mb-4">Watch your progress</h2>
                 <p className="lg:max-w-prose mb-8 leading-7">Gain consistency through data. View insights and performance of your trades over time. Unlock your highest level of performance now.</p>
-                <ButtonLink to="/#why-trade-tracker" display="primary" variant={'main'}>See metric →</ButtonLink>
+                <ButtonLink to="/?join=true" display="primary" scroll={false} variant={'main'}>Get started →</ButtonLink>
                 </div>
             </div>
 

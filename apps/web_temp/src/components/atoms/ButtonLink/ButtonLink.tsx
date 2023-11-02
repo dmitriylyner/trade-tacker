@@ -8,10 +8,8 @@ export const buttonVariants = cva(
     {
         variants: {
             variant: {
-                // default: "bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300",
-                default: "bg-gradient-to-r from-[#119B81] via-[#28866B] to-[#00805B] hover:bg-gradient-to-br focus:ring focus:outline-none focus:ring-green-300 border border-white",
-                // default: "btn-animate  bg-color-500 font-bold border border-white hover:bg-[var(--dark-1)] transition-colors",
-                main: " bg-gradient-to-r from-[#119B81] via-[#28866B] to-[#00805B] hover:bg-gradient-to-br btn-animate ",
+                default: "btn-animate  bg-color-500 font-bold border border-white hover:bg-[var(--dark-1)] transition-colors",
+                main: " bg-color-500 btn-animate ",
                 mainWhite: " bg-white btn-animate text-slate-950",
                 whiteMain: "btn-animate-lg text-lg md:w-3/4 w-full mr-4 md:ml-4 after:border-r-color-400 after:border-r-2 after:border-b-2 border-2 after:border-b-color-400 border-color-400 text-color-400",
                 whiteMainLarge: "btn-animate-lg mx-6 md:mx-[unset] xl:px-24  md:text-xl lg:text-2xl after:border-r-color-400 after:border-r-[3px] after:border-b-[3px] border-[3px] after:border-b-color-400 border-color-400 text-color-400",

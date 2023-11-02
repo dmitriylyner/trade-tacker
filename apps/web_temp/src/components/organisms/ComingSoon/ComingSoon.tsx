@@ -1,3 +1,5 @@
+"use client"
+
 import IconLogo from '~/components/atoms/IconLogo'
 import ButtonLink from '~/components/atoms/ButtonLink'
 import { useForm, ValidationError } from "@formspree/react";
@@ -67,7 +69,7 @@ export default function ComingSoon(){
                                 </button>
                             </p> */}
 
-                            <IconLogo className="relative mt-8 pl-4 translate-x-[-25%] left-1/2"/>
+                            <IconLogo className="relative mt-8 pl-8 translate-x-[-25%] left-1/2"/>
 
                         </section>
                     }

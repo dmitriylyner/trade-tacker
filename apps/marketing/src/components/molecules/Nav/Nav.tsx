@@ -34,7 +34,7 @@ export default function Nav(){
                             m-auto
                         "
                         >
-                    <IconLogo className="p-4"/>
+                    <IconLogo className="md:p-4"/>
 
                     {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ export default function Nav(){
                     <div className='flex gap-5 md:hidden'>
                         <DialogNav />
                         <Link
-                            className="px-6 py-2 block  text-base hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
+                            className="px-6 py-2 block  text-base hover:bg-color-500 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
                             href="/?join=true">Sign Up →
                         </Link>
                     </div>
@@ -80,7 +80,7 @@ export default function Nav(){
                             </li>
                             <li className="p-4">
                             <Link
-                                className="md:px-6 md:py-2 block hover:bg-main-color-400 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
+                                className="md:px-6 md:py-2 block hover:bg-color-500 text-slate-50 bg-[var(--dark-1)] rounded-2xl transition-colors"
                                 href="/?join=true">Sign Up →</Link>
                             </li>
                             <li className="p-4">
