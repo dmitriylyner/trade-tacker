@@ -13,7 +13,7 @@ function InfoSection(){
 
             <div className=" md:w-1/2 py-28 sm:grid-cols-2 md:gap-8 bg-[var(--dark-1)] bg-cover px-12 lg:px-28 text-slate-50">
                 <h2 className="text-3xl font-bold mb-4 drop-shadow-md">Redefining the stock journal.</h2>
-                <p className="mb-8 leading-7">Practice makes perfect, and Trade Tracker improves your steady progress with intuitive features.</p>
+                <p className="mb-8 leading-7">Practice makes perfect. Our enhanced trading journal reveals insights into your personalized trading style - increasing consistency.</p>
                 <ButtonLink to="/#why-trade-tracker" display="primary" variant={'main'} >See Metrics →</ButtonLink>
             </div>
         </section>

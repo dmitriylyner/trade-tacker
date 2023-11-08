@@ -89,7 +89,7 @@ function HeroSection(){
 
                         <Progress />
 
-                        <p className="text-xl font-bold" style={{width: '2rem'}}><AnimatedNumbers value={20}/></p>
+                        <p className="text-xl font-bold" style={{width: '2rem', color: '#6C6C6C'}}>+<AnimatedNumbers value={20}/></p>
 
                     </div>
 
