@@ -1,7 +1,11 @@
 import { type Config } from "tailwindcss";
 
 export default {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  mode: 'jit',
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "apps/web_t3/src/**/*.{js,ts,jsx,tsx}"
+  ],
   theme: {
     container: {
          // default breakpoints but with 40px removed
