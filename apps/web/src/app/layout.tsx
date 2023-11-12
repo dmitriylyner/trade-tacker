@@ -1,7 +1,7 @@
+import '~/styles/globals.css'
 import type { Metadata } from 'next'
  
 // These styles apply to every route in the application
-import '~/styles/globals.css'
  
 export const metadata: Metadata = {
   title: 'trade Tracker App',

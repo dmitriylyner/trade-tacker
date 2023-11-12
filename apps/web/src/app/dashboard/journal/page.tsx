@@ -6,7 +6,11 @@ import type { Metadata } from 'next'
 // }
 
 const page: FC = ({}) => {
-    return <h1 className="text-3xl">journal page</h1>
+    return (
+      <main  className="m-4">
+        <h1 className="text-3xl">journal page</h1>
+      </main>
+    )
 }
 
 export const metadata: Metadata = {

@@ -109,7 +109,7 @@ export default function LoginSignUp(){
                             />
                         </fieldset>
 
-                        <button className="mt-8 block text-center w-full shadow-md max-w-xl rounded-sm bg-main-color-400 py-4 px-12 text-slate-50 text-lg hover:bg-color-500 transition-colors " onClick={() => router.push('/dashboard/overview')}>Register →</button>
+                        <button className="mt-8 block text-center w-full shadow-md max-w-xl rounded-sm bg-main-color-400 py-4 px-12 text-slate-50 text-lg hover:bg-color-500 transition-colors " onClick={() => router.push('/dashboard')}>Register →</button>
                         
                         <p className="text-center mt-8">
                             Already have an account? &nbsp;
