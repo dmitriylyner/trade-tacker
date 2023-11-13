@@ -1,14 +1,20 @@
 import { type NextPage } from "next"
-// import LoginSignUp from "~/components/organisms/LoginSignUp"
-import Register from "~/components/organisms/Register"
+import Card from '~/components/ui/Card'
+import RegisterForm from "~/components/molecules/Forms/RegisterForm"
+import Link from 'next/link'
 
 const Login: NextPage = () => {
     return (
         <main className="flex h-screen bg-gradient-to-br from-[#FFFFFF] to-[var(--gradient-color)]">
-            <section className="min-h-[75%] m-auto mx-6 min-w-max md:mx-auto max-w-3xl w-full bg-slate-50 p-6 pt-0 rounded-lg drop-shadow-lg lg:w-1/3 lg:min-w-[550px] ">
-                {/* <LoginSignUp /> */}
-                <Register />
-            </section>
+            <Card>
+                <h1 className="text-4xl mb-4 text-center font-extrabold">Create your account</h1>
+                <p className="text-center mb-4">It&apos;s free!</p>
+                <RegisterForm />
+                <p className="text-center mt-8">
+                    Already have an account? &nbsp;
+                    <Link href="/login" className="underline underline-offset-4">Sign in</Link>
+                </p>
+            </Card>
         </main>
     )
 }
