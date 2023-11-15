@@ -21,6 +21,22 @@
     max-width: 26ch;
 }
 
+.separator{
+  position:relative;
+  text-align:center;
+  user-select:none;
+}
+.separator::before {
+  background-color: #e0e3eb;
+  content: "";
+  display:block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
 .custom-gradient{
     /* background: linear-gradient(336.02deg, #164B4C 0%, #06BD9A 98.51%); */
     background: linear-gradient(155.9deg, #164B4C 1.87%, #119B81 100%);

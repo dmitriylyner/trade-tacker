@@ -50,7 +50,7 @@ export const ResetPasswordForm = ( { token } : {token: string}) => {
 
     return (
         <form 
-            className='space-y-8 w-3/4'
+            className='space-y-5 w-3/4'
             onSubmit={handleSubmit}
         >
             <div className="grid w-full max-w-sm items-center gap-1.5">

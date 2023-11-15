@@ -1,10 +1,9 @@
 import { type Config } from "tailwindcss";
 
 export default {
-  mode: 'jit',
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
-    "apps/web_t3/src/**/*.{js,ts,jsx,tsx}"
+    "apps/web/src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     container: {

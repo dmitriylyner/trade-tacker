@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
+import Link from 'next/link'
 import { Input } from '~/components/ui/Input'
 import { Label } from '~/components/ui/Label'
 import { Button } from '~/components/ui/Button'
+import Loader from '~/components/ui/Loader'
 
 function SignInForm(){
 
@@ -15,12 +17,16 @@ function SignInForm(){
 
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
+    const [ isLoading, setIsLoading ] = useState<boolean>(false)
 
     const [error, setError ] = useState('')
 
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
+
+        setIsLoading(true)
+
         try {
             const res = await signIn('credentials', {
                 email,
@@ -40,7 +46,7 @@ function SignInForm(){
     return (
         <>
             <form 
-            className='space-y-8 w-3/4'
+            className='space-y-5 w-3/4'
             onSubmit={handleSubmit}
             >
 
@@ -54,8 +60,16 @@ function SignInForm(){
                         type='email'
                     />
                 </div>
+
+          
+
                 <div className="grid w-full  items-center gap-1.5">
-                    <Label htmlFor='password'>Password</Label>
+                    <div className="flex leading-none justify-between">
+                        <Label htmlFor='password' className="text-sm">Password</Label>
+                        <p className="text-sm text-right">
+                            <Link href="/reset-request" className="text-[#119B81]">Forgot your password?</Link>
+                        </p>
+                    </div>
                     <Input 
                         required
                         value={password}
@@ -64,7 +78,14 @@ function SignInForm(){
                         type='password'/>
                 </div>
 
-            <Button className="w-full mt-10" size="lg">login</Button>
+                <div>
+                    {
+                        isLoading ?
+                                <Loader/>
+                            :
+                                <Button className="w-full mt-4" size="lg">login</Button>
+                    }
+                </div>
         </form>
 
         <p>{error}</p>

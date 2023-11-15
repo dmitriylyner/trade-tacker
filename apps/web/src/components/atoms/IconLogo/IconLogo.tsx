@@ -1,7 +1,7 @@
 
 export default function IconLogo({className}:{className?: string}){
     return (
-        <div className={`h-full flex items-center ${className}`}>
+        <div className={` flex ${className}`}>
             <a href="/">
                 <svg viewBox="0 0 216 68" width="150" height="68" className="h-12">
                     <clipPath id="clip">
