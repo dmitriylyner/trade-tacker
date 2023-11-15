@@ -1,12 +1,16 @@
 import { FC } from 'react'
 import type { Metadata } from 'next'
 
-interface pageProps {
+// interface pageProps {
 
-}
+// }
 
-const page: FC<pageProps> = ({}) => {
-    return <h1 className="text-3xl">journal page</h1>
+const page: FC = ({}) => {
+    return (
+      <main  className="m-4">
+        <h1 className="text-3xl">journal page</h1>
+      </main>
+    )
 }
 
 export const metadata: Metadata = {

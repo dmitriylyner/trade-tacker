@@ -1,8 +1,8 @@
 
-export default function IconLogo({className}:{className?: string}){
+export default function IconLogo({className}:{className?: string }){
     return (
-        <div className={`h-full flex items-center ${className}`}>
-            <a href="/">
+        <div className={`${className ? className : ''}`}>
+            <a href="/"> {/* eslint-disable-line @next/next/no-html-link-for-pages */}
                 <svg viewBox="0 0 216 68" width="150" height="68" className="h-12">
                     <clipPath id="clip">
                         <path

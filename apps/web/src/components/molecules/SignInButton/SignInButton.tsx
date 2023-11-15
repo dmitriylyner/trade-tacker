@@ -10,9 +10,9 @@ import { FC, useState } from 'react'
  * hence this unreusable component.
  */
 
-interface SignInButtonProps {}
+// interface SignInButtonProps {}
 
-const SignInButton: FC<SignInButtonProps> = ({}) => {
+const SignInButton: FC = ({}) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const signInWithGoogle = async () => {

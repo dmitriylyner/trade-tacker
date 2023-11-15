@@ -9,6 +9,10 @@ const config = {
   reactStrictMode: true,
   transpilePackages: ["ui"],
 
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client', 'bcrypt']
+  },
+
   /**
    * If you have the "experimental: { appDir: true }" setting enabled, then you
    * must comment the below `i18n` config out.

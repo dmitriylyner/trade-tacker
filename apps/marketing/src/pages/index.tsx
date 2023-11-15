@@ -1,8 +1,8 @@
 import { type NextPage } from "next";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
-import { getServerSession } from "next-auth";
-import { authOptions } from "~/server/auth";
+// import { signIn, signOut, useSession } from "next-auth/react";
+// import { getServerSession } from "next-auth";
+// import { authOptions } from "~/server/auth";
 
 // import ButtonLink from "~/components/atoms/ButtonLink"
 
@@ -12,14 +12,19 @@ import InfoSection from "~/components/organisms/LandingPage/InfoSection";
 import DetailsSection from "~/components/organisms/LandingPage/DetailsSection";
 import ProgressSection from "~/components/organisms/LandingPage/ProgressSection";
 import PlanSection from "~/components/organisms/LandingPage/PlanSection";
+import ContactForm from "~/components/molecules/ContactForm";
 // import HeroImage from '../images/hero-img-trade-tracker.png';
+import { buttonVariants } from "~/components/atoms/ButtonLink"
 
 import Dialog from '~/components/molecules/Dialog'
+
+// import { useRouter } from 'next/navigation'
 
 // import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  // const router = useRouter()
 
   return (
     <Layout>
@@ -28,8 +33,14 @@ const Home: NextPage = () => {
             
           <HeroSection />
 
-          <div className="sticky top-10 z-20 h-[20vh] max-h-[300px]">
+          <div className="sticky top-10 z-20 pb-[24vh] max-h-[300px]" style={{pointerEvents: 'none'}}>
             {/* <Button to="/login">Try for free →</Button> */}
+            <Link className={buttonVariants({variant: 'default'})} href="/?join=true" scroll={false} style={{pointerEvents: 'auto'}}>
+                Try for Free →
+            </Link>
+              {/* <button className={buttonVariants({variant: 'default'})} onClick={() => router.push("?join=true")}>
+                Try for Free →
+              </button> */}
             <Dialog />
           </div>
 
@@ -52,15 +63,7 @@ const Home: NextPage = () => {
           <PlanSection />
 
           <div>
-            <form className="px-8 pt-8 pb-12 mb-20">
-              <div className="mb-4">
-                <h4 className="text-center leading-7 mb-8">Woah, you made it all the way down here. <br/> Reward yourself by signing up to our awesome newsletter.</h4>
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                  {/* Email */}
-                </label>
-                <input className="shadow appearance-none border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" />
-              </div>
-            </form>
+            <ContactForm />
           </div>
           
           {/* <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">

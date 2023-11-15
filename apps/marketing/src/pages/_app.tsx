@@ -1,8 +1,7 @@
 import { type AppType } from "next/app";
-// import { type Session } from "next-auth";
-// import { SessionProvider } from "next-auth/react";
+import { DefaultSeo, SocialProfileJsonLd } from 'next-seo'
+import SEO from '../../next-seo.config';
 
-// import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
 
@@ -11,7 +10,20 @@ const MyApp: AppType = ({
   pageProps: { ...pageProps },
 }) => {
   return (
+    <>
+    <DefaultSeo {...SEO} />
+    <SocialProfileJsonLd
+      type="Organization"
+      name="Trade Tracker"
+      url="http://tradetracker.ai"
+      sameAs={[
+        'http://www.facebook.com/trade-tracker',
+        'http://instagram.com/tradetracker.ai',
+        'http://www.linkedin.com/in/tradetracker',
+      ]}
+    />
       <Component {...pageProps} />
+    </>
   );
 };
 

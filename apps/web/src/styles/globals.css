@@ -1,6 +1,10 @@
-@tailwind base;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @layer base {
     html {
@@ -15,6 +19,22 @@
 
 .max-ch-25{
     max-width: 26ch;
+}
+
+.separator{
+  position:relative;
+  text-align:center;
+  user-select:none;
+}
+.separator::before {
+  background-color: #e0e3eb;
+  content: "";
+  display:block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 15px;
 }
 
 .custom-gradient{

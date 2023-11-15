@@ -11,7 +11,7 @@ const Progress = () => {
 
   return (
     <ProgressRadix.Root
-      className="relative overflow-hidden bg-color-250 rounded-full w-[300px] h-[25px]"
+      className="relative overflow-hidden bg-color-250 rounded-full md:w-[180px] lg:w-[300px] h-[25px] hidden md:inline"
       style={{
         // Fix overflow clipping in Safari
         // https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0

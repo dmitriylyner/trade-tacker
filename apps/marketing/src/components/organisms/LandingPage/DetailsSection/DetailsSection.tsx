@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AppPreviewImg from '../../../../images/app-preview.png';
+import AppPreviewImg from '../../../../images/app-preview-2.png';
 import IconChart from '../../../../images/svgs/icon-chart-up.svg';
 import IconPie from '../../../../images/svgs/icon-pie-chart.svg';
 import IconClipboard from '../../../../images/svgs/icon-clipboard.svg';
@@ -13,16 +13,16 @@ function DetailsSection(){
                 <Image 
                 src={AppPreviewImg}
                 alt='Trade Tracker App Preview'
-                className="relative z-10"
+                className="relative z-10 max-w-[85%] m-auto"
                 />
 
             </div>
 
-            <section className="bg-pattern-2 bg-cover w-full -mt-48">
-                <div id="why-trade-tracker" className=" text-slate-50 mx-12 md:mx-36 lg:mx-auto lg:max-w-6xl my-32">
+            <section className="bg-pattern-3 bg-cover w-full -mt-48">
+                <div id="why-trade-tracker" className=" text-slate-50 mx-12 lg:mx-36 xl:mx-auto lg:max-w-6xl my-32">
                 <div className="pt-36">
-                    <h3 className="text-2xl">Why Trade Tracker?</h3>
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-950 drop-shadow-md">Habit and performance</h2>
+                    <h3 className="text-2xl text-[#07F2C7]">Why Trade Tracker?</h3>
+                    <h2 className="text-4xl md:text-5xl font-bold drop-shadow-md">Habit and performance</h2>
                 </div>
 
                 {/* <div className="flex py-16 align-items justify-between">
@@ -51,7 +51,7 @@ function DetailsSection(){
                     </div>
                 </div> */}
 
-                <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-8 py-16 md:grid-flow-col-dense">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:grid-cols-4 md:gap-8 py-16 md:grid-flow-col-dense">
                     <div className="my-2">
                     <IconChart className='text-6xl'/>
                     <h4 className="font-bold my-2 drop-shadow-md leading-7">Customizable charts</h4>

@@ -1,13 +1,32 @@
 import { type NextPage } from "next"
-import LoginSignUp from "~/components/organisms/LoginSignUp"
+import type { Metadata } from 'next'
+import Card from '~/components/ui/Card'
+import RegisterForm from "~/components/molecules/Forms/RegisterForm"
+import Link from 'next/link'
+import { LoginGoogleBtn } from '~/components/molecules/Auth'
+import IconLogo from '~/components/atoms/IconLogo'
 
+
+export const metadata: Metadata = {
+    title: 'Sign Up and Create a Trade Tracker Account | Trade Tracker',
+    description: 'Sign up to quickly create a new Trade Tracker account today and get started managing your investment journal and analysis.',
+  }
 
 const Login: NextPage = () => {
     return (
-        <main className="flex h-screen bg-gradient-to-br from-[#FFFFFF] to-[var(--gradient-color)]">
-            <section className="min-h-[75%] m-auto mx-6 min-w-max md:mx-auto max-w-3xl w-full bg-slate-50 p-6 pt-0 rounded-lg drop-shadow-lg lg:w-1/3 lg:min-w-[550px] ">
-                <LoginSignUp />
-            </section>
+        <main className="flex min-h-screen bg-gradient-to-br from-[#FFFFFF] to-[var(--gradient-color)]">
+            <IconLogo className="fixed top-2 m-4 scale-[0.8]"/>
+            <Card>
+                <h1 className="text-4xl mb-4 text-center font-bold">Create your account</h1>
+                <p className="text-center mb-4">Get started for free</p>
+                <RegisterForm />
+                <div className="separator mt-6 w-3/4"><p className=" text-slate-600 inline-block bg-slate-50 z-10 relative px-4">or continue with</p></div>
+                <LoginGoogleBtn />
+                <p className="text-center mt-10 text-sm">
+                    Already have an account? &nbsp;
+                    <Link href="/login" className="text-[#119B81]">Sign in</Link>
+                </p>
+            </Card>
         </main>
     )
 }
