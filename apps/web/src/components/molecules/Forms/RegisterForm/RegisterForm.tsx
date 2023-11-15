@@ -105,7 +105,7 @@ export default function RegisterForm(){
                         type='password'
                         aria-label="Enter Password"
                      />
-                    <p><CloseCircle className="inline mb-[4px]"/> {errors.password?.message}</p>
+                    {errors.password?.message && <p><CloseCircle className="inline mb-[4px]"/> {errors.password?.message}</p>}
 
                 </div>
 
