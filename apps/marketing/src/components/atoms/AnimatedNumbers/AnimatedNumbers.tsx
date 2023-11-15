@@ -6,7 +6,7 @@ function AnimatedNumbers({
 }: {
     value: number
 }){
-
+ 
     const ref = useRef<HTMLSpanElement | null>(null)
 
     const motionValue = useMotionValue(0)
