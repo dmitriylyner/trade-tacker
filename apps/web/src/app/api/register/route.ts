@@ -36,7 +36,7 @@ export async function POST(req: Request){
             from: 'support@tradetracker.ai', // Change to your verified sender
             subject: 'Confirm your Trade Tracker account',
             text: `Please confirm your account\'s email address`,
-            html: `<div><strong>CONFIRM NOW</strong><a href="http://localhost:3000/activate/${token.token}">activate account</a></div>`, // TODO - need to change the link address to env variable DOMAIN not hard coded
+            html: `<div><strong>CONFIRM NOW</strong><a href="${process.env.SITE_URL}/activate/${token.token}">activate account</a></div>`, // TODO - need to change the link address to env variable DOMAIN not hard coded
         }
     
         sgMail

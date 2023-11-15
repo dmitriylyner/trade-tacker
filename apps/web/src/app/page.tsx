@@ -24,7 +24,7 @@ const Login: NextPage = () => {
                 <LoginGoogleBtn />
                 <p className="text-center mt-10 text-sm">
                     Already have an account? &nbsp;
-                    <Link href="/login" className="text-[#119B81]">Sign in</Link>
+                    <Link href="/login" className="text-[#119B81]">Login</Link>
                 </p>
             </Card>
         </main>
