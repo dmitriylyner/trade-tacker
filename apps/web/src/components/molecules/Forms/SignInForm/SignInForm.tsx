@@ -58,6 +58,7 @@ function SignInForm(){
                         onChange={(e) => setEmail(e.target.value)}
                         id='email' 
                         type='email'
+                        tabIndex={1}
                     />
                 </div>
 
@@ -67,7 +68,13 @@ function SignInForm(){
                     <div className="flex leading-none justify-between">
                         <Label htmlFor='password' className="text-sm">Password</Label>
                         <p className="text-sm text-right">
-                            <Link href="/reset-request" className="text-[#119B81]">Forgot your password?</Link>
+                            <Link 
+                                href="/reset-request" 
+                                className="text-[#119B81]"
+                                tabIndex={4}
+                            >
+                                    Forgot your password?
+                            </Link>
                         </p>
                     </div>
                     <Input 
@@ -75,7 +82,10 @@ function SignInForm(){
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         id='password' 
-                        type='password'/>
+                        type='password'
+                        tabIndex={2}
+                    />
+                        
                 </div>
 
                 <div>
@@ -83,7 +93,7 @@ function SignInForm(){
                         isLoading ?
                                 <Loader/>
                             :
-                                <Button className="w-full mt-4" size="lg">login</Button>
+                                <Button className="w-full mt-4" size="lg" tabIndex={3}>Login →</Button>
                     }
                 </div>
         </form>

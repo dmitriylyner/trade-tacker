@@ -2,7 +2,7 @@
 export default function IconLogo({className}:{className?: string}){
     return (
         <div className={` flex ${className}`}>
-            <a href="/">
+            <a href="/" tabIndex={10}>
                 <svg viewBox="0 0 216 68" width="150" height="68" className="h-12">
                     <clipPath id="clip">
                         <path

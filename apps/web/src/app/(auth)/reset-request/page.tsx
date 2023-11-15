@@ -1,8 +1,15 @@
-
+import type { Metadata } from 'next'
 import Card from '~/components/ui/Card'
 import Link from 'next/link'
 import ResetRequestForm from '~/components/molecules/Forms/ResetRequestForm'
 import IconLogo from '~/components/atoms/IconLogo'
+
+
+export const metadata: Metadata = {
+    title: 'Reset Password Request | Trade Tracker',
+    description: 'Request a reset/new password for your Trade Tracker account.',
+}
+
 
 export default function Reset(){
 
@@ -19,7 +26,7 @@ export default function Reset(){
                     <Link href="/login" className="text-[#119B81]">Return to Login</Link>
                 </p>
 
-                <p className="text-center mt-8">
+                <p className="text-center mt-8 text-sm">
                     Need to create an account? &nbsp;
                     <Link href="/" className="text-[#119B81]">Create Account</Link>
                 </p>

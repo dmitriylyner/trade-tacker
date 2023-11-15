@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import type { Metadata } from 'next'
 import { getServerSession } from 'next-auth'
-import { authOptions } from '../api/auth/[...nextauth]/route'
+import { authOptions } from "~/app/lib/auth";
 import { User } from '../api/user'
 
 // interface pageProps {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import IconLogoWhite from '~/images/svgs/icon-logo-white.svg'
 import { Providers } from '../providers';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '../api/auth/[...nextauth]/route';
+import { authOptions } from "~/app/lib/auth";
 
 // import { NextAuthProvider } from '../providers';
 // import { authOptions } from '~/server/auth';
@@ -103,10 +103,7 @@ async function Layout({ children } : LayoutProps ){
                                 <li className="p-2">
                                     <Link className="text-slate-50  block hover:text-main-color-400 transition-colors" href="/dashboard/progress">Progress</Link>
                                 </li>
-                                <li className="p-2">
-                                    <Link className="text-red-600  block hover:text-main-color-400 transition-colors" href="/">HOME</Link>
-                                </li>
-                                <li>
+                                <li className="mt-4">
                                     <LogoutButton />
                                 </li>
                                 </ul>

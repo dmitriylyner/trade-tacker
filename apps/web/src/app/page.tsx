@@ -1,10 +1,16 @@
 import { type NextPage } from "next"
+import type { Metadata } from 'next'
 import Card from '~/components/ui/Card'
 import RegisterForm from "~/components/molecules/Forms/RegisterForm"
 import Link from 'next/link'
 import { LoginGoogleBtn } from '~/components/molecules/Auth'
 import IconLogo from '~/components/atoms/IconLogo'
 
+
+export const metadata: Metadata = {
+    title: 'Sign Up and Create a Trade Tracker Account | Trade Tracker',
+    description: 'Sign up to quickly create a new Trade Tracker account today and get started managing your investment journal and analysis.',
+  }
 
 const Login: NextPage = () => {
     return (
@@ -16,7 +22,7 @@ const Login: NextPage = () => {
                 <RegisterForm />
                 <div className="separator mt-6 w-3/4"><p className=" text-slate-600 inline-block bg-slate-50 z-10 relative px-4">or continue with</p></div>
                 <LoginGoogleBtn />
-                <p className="text-center mt-10">
+                <p className="text-center mt-10 text-sm">
                     Already have an account? &nbsp;
                     <Link href="/login" className="text-[#119B81]">Sign in</Link>
                 </p>

@@ -1,7 +1,13 @@
-import Link from 'next/link'
+import type { Metadata } from 'next'
 import Card from '~/components/ui/Card'
 import ResetPasswordForm from '~/components/molecules/Forms/ResetPasswordForm'
 import IconLogo from '~/components/atoms/IconLogo'
+
+export const metadata: Metadata = {
+    title: 'Password Reset | Trade Tracker',
+    description: 'Choose a new password for your Trade Tracker account.',
+}
+
 
 export default function PasswordReset({params}: {params: {token: string}}) {
     return (

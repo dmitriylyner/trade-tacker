@@ -35,7 +35,7 @@ export const LogoutButton = () => {
 }
 
 
-export const LoginGoogleBtn = () => {
+export const LoginGoogleBtn = ({ tabIndex = 0 } : {tabIndex?:number}) => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const signInWithGoogle = async () => {
@@ -58,7 +58,7 @@ export const LoginGoogleBtn = () => {
                 isLoading ?
                         <Loader />
                     :
-                        <button className={`${buttonVariants({variant: 'depressed'})} mt-5 text-slate-600`} onClick={signInWithGoogle}>
+                        <button tabIndex={tabIndex} className={`${buttonVariants({variant: 'depressed'})} mt-5 text-slate-600`} onClick={signInWithGoogle}>
                            <GoogleIcon className='w-5 h-5 mr-1'/> Google
                         </button>
             }
