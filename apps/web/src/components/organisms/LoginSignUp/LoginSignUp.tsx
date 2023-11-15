@@ -114,7 +114,7 @@ export default function LoginSignUp(){
                         <p className="text-center mt-8">
                             Already have an account? &nbsp;
                             <button onClick={() => setControlledValue("tab1")} className="underline decoration-inherit text-color-500">
-                                Login here
+                                Login
                             </button>
                         </p>
                     </section>

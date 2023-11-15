@@ -8,6 +8,7 @@ import { Input } from '~/components/ui/Input'
 import { Label } from '~/components/ui/Label'
 import { Button } from '~/components/ui/Button'
 import Loader from '~/components/ui/Loader'
+import CloseCircle from '~/images/svgs/close-circle-icon.svg'
 
 function SignInForm(){
 
@@ -31,12 +32,20 @@ function SignInForm(){
             const res = await signIn('credentials', {
                 email,
                 password,
-                callbackUrl
+                callbackUrl,
+                redirect: false
             })
+
+            // if(res?.status === 401){
+            //     setError('Invalid email or password')
+            // }
+
             if(!res?.error){
+                console.log({res})
                 router.push(callbackUrl)
             } else {
-                setError('Invalid email or password')
+                setIsLoading(false)
+                setError('Invalid email or password. Please try again.')
             }
         } catch(error){
             console.error(error)
@@ -88,6 +97,8 @@ function SignInForm(){
                         
                 </div>
 
+                {!!error && <p className="italic"><CloseCircle className="inline mb-[4px]"/> {error}</p>}
+
                 <div>
                     {
                         isLoading ?
@@ -98,7 +109,6 @@ function SignInForm(){
                 </div>
         </form>
 
-        <p>{error}</p>
     </>
     )
 }

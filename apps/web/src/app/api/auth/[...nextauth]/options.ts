@@ -5,10 +5,10 @@ export const options: NextAuthOptions = {
     // pages: {
     //     signIn: "/signin"
     // },
-    callbacks:{
-        async signIn({user, account, profile, email, credentials}) { // eslint-disable-line @typescript-eslint/require-await
-            return '/dashboard'
-        }
-    }
+    // callbacks:{
+    //     async signIn({user, account, profile, email, credentials}) { // eslint-disable-line @typescript-eslint/require-await
+    //         return '/dashboard'
+    //     }
+    // }
 
 }

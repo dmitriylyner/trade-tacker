@@ -41,7 +41,7 @@ export const LoginGoogleBtn = ({ tabIndex = 0 } : {tabIndex?:number}) => {
     const signInWithGoogle = async () => {
         try {
         setIsLoading(true)
-        await signIn('google', {callbackUrl: 'http://localhost:3000/dashboard'}) // TODO set env variable for dev and prod for redirect path
+        await signIn('google', {callbackUrl: `${process.env.SITE_URL}/dashboard`}) // TODO set env variable for dev and prod for redirect path
         } catch (error) {
         //   toast({
         //     title: 'Error signing in',

@@ -1,15 +1,12 @@
 "use client"
 
 import { useState } from 'react'
-// import ButtonLink from '~/components/atoms/ButtonLink'
-
 import { useForm, SubmitHandler} from 'react-hook-form';
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Loader from '~/components/ui/Loader';
-
-
-
+import CloseCircle from '~/images/svgs/close-circle-icon.svg'
+import CheckBox from '~/images/svgs/checkbox-icon.svg'
 import { Button } from '~/components/ui/Button'
 import { Input } from '~/components/ui/Input'
 import { Label } from '~/components/ui/Label'
@@ -108,11 +105,11 @@ export default function RegisterForm(){
                         type='password'
                         aria-label="Enter Password"
                      />
-                    <p>{errors.password?.message}</p>
+                    <p><CloseCircle className="inline mb-[4px]"/> {errors.password?.message}</p>
 
                 </div>
 
-            {!!errorMsg ? <p className="text-center">{errorMsg}</p> : null}
+            {!!errorMsg ? <p className="text-center"><CloseCircle className="inline mb-[4px]"/>{errorMsg}</p> : null}
 
             {
                 isLoading ?
@@ -124,6 +121,8 @@ export default function RegisterForm(){
 
         </form>}
 
-        {checkEmail && <p>Success! Please check your email to confirm you account.</p>}
+        {checkEmail && <p><CheckBox />Success! Please check your email to confirm you account.</p>}
+
+        
     </>)
 }
