@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "~/components/ui/container-scroll-animation";
-// import AppPreviewImg from '~/images/app-preview-2.png'
-import AppPreviewImg from '~/images/overview-preview.png'
+import AppPreviewImg from '~/images/overview-preview-3.png'
 import Image from "next/image";
 
 function TabletScroll() {
