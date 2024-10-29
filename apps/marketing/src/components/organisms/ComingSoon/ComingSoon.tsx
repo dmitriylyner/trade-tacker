@@ -22,7 +22,7 @@ export default function ComingSoon(){
 
                             <ButtonLink to="/" display="secondary" variant={'main'} >Exit →</ButtonLink>
 
-                            <IconLogo className="relative mt-16 pl-4 translate-x-[-25%] left-1/2"/>
+                            <IconLogo className="relative mt-16 translate-x-[-50%] left-1/2"/>
                          </section>
                     :
                         <section className="mx-4 my-6 ">
@@ -58,7 +58,7 @@ export default function ComingSoon(){
                                 <ValidationError errors={state.errors} />
                             </form>
 
-                            <IconLogo className="relative mt-10 pl-4 translate-x-[-25%] left-1/2"/>
+                            <IconLogo className="relative mt-10 translate-x-[-50%] left-1/2"/>
 
                         </section>
                     }

@@ -1,5 +1,4 @@
-import Image from "next/image";
-import AppPreviewImg from '../../../../images/app-preview-2.png';
+import TabletScroll from '~/components/molecules/TabletScroll';
 import IconChart from '../../../../images/svgs/icon-chart-up.svg';
 import IconPie from '../../../../images/svgs/icon-pie-chart.svg';
 import IconClipboard from '../../../../images/svgs/icon-clipboard.svg';
@@ -8,17 +7,11 @@ import IconFlag from '../../../../images/svgs/icon-flag.svg';
 function DetailsSection(){
     return (
         <>
-            <div className="mt-16 md:mt-44 px-4 ">
-                <h2 className="text-4xl md:text-5xl mb-10 font-bold text-center">Unlocking new paradigms</h2>
-                <Image 
-                src={AppPreviewImg}
-                alt='Trade Tracker App Preview'
-                className="relative z-10 max-w-[85%] m-auto"
-                />
-
+            <div className=" px-4 ">
+                <TabletScroll />
             </div>
 
-            <section className="bg-pattern-3 bg-cover w-full -mt-48">
+            <section className="bg-pattern-3 bg-cover w-full -mt-72 md:-mt-56">
                 <div id="why-trade-tracker" className=" text-slate-50 mx-12 lg:mx-36 xl:mx-auto lg:max-w-6xl my-32">
                 <div className="pt-36">
                     <h3 className="text-2xl text-[#07F2C7]">Why Trade Tracker?</h3>
