@@ -37,7 +37,7 @@ export default function RootLayout({
               m-auto
             "
           >
-            <div className="my-8 m-auto md:mx-0 md:my-2">
+            <div className="my-8 m-auto md:mx-0 md:my-8">
               <IconLogoWhite width="8rem" height="5rem" />
               <p className="text-slate-300 text-sm md:text-base md:mb-4">© Trade Tracker 2024</p>
             </div>

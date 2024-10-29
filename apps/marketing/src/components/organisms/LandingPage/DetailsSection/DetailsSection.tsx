@@ -11,7 +11,7 @@ function DetailsSection(){
                 <TabletScroll />
             </div>
 
-            <section className="bg-pattern-3 bg-cover w-full -mt-72 md:-mt-56">
+            <section className="bg-pattern-3 bg-cover w-full mt-[-18rem] md:mt-[-24rem]">
                 <div id="why-trade-tracker" className=" text-slate-50 mx-12 lg:mx-36 xl:mx-auto lg:max-w-6xl my-32">
                 <div className="pt-36">
                     <h3 className="text-2xl text-[#07F2C7]">Why Trade Tracker?</h3>
