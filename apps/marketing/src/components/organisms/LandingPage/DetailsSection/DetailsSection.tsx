@@ -25,55 +25,29 @@ function DetailsSection(){
                     <h2 className="text-4xl md:text-5xl font-bold drop-shadow-md">Habit and performance</h2>
                 </div>
 
-                {/* <div className="flex py-16 align-items justify-between">
-                    <div className="my-2">
-                    <IconChart className='text-6xl'/>
-                    <h4 className="font-bold my-2 drop-shadow-md">Customizable charts</h4>
-                    <p className="max-ch-25">Create charts based on the metrics you want to track.</p>
-                    </div>
-
-                    <div className="my-2">
-                    <IconPie className='text-6xl'/>
-                    <h4 className="font-bold my-2 drop-shadow-md">Analyze portfolios</h4>
-                    <p className="max-ch-25">Personal, retirement, crypto, options, stocks, you name it. </p>
-                    </div>
-
-                    <div className="my-2 ">
-                    <IconClipboard className='text-6xl'/>
-                    <h4 className="font-bold my-2 drop-shadow-md" >Evaluate trades</h4>
-                    <p className="max-ch-25">Get a new perspective on past trades and how to improve.</p>
-                    </div>
-
-                    <div className="my-2">
-                    <IconFlag className='text-6xl'/>
-                    <h4 className="font-bold my-2 drop-shadow-md">Personalized Notes</h4>
-                    <p className="max-ch-25">Create shortcuts and reminders to perform your best.</p>
-                    </div>
-                </div> */}
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:grid-cols-4 md:gap-8 py-16 md:grid-flow-col-dense">
                     <div className="my-2">
                     <IconChart className='text-6xl'/>
                     <h4 className="font-bold my-2 drop-shadow-md leading-7">Customizable charts</h4>
-                    <p className="max-ch-25">Create charts based on the metrics you want to track.</p>
+                    <p className="md:max-ch-25">Create charts based on the metrics you want to track.</p>
                     </div>
 
                     <div className="my-2">
                     <IconPie className='text-6xl'/>
                     <h4 className="font-bold my-2 drop-shadow-md leading-7">Analyze portfolios</h4>
-                    <p className="max-ch-25">Personal, retirement, crypto, options, stocks, you name it. </p>
+                    <p className="md:max-ch-25">Personal, retirement, crypto, options, stocks, you name it. </p>
                     </div>
 
                     <div className="my-2 ">
                     <IconClipboard className='text-6xl'/>
                     <h4 className="font-bold my-2 drop-shadow-md leading-7" >Evaluate trades</h4>
-                    <p className="max-ch-25">Get a new perspective on past trades and how to improve.</p>
+                    <p className="md:max-ch-25">Get a new perspective on past trades and how to improve.</p>
                     </div>
 
                     <div className="my-2">
                     <IconFlag className='text-6xl'/>
                     <h4 className="font-bold my-2 drop-shadow-md leading-7">Personalized Notes</h4>
-                    <p className="max-ch-25">Create shortcuts and reminders to perform your best.</p>
+                    <p className="md:max-ch-25">Create shortcuts and reminders to perform your best.</p>
                     </div>
                 </div>
                 </div>

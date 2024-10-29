@@ -4,13 +4,13 @@ import { VariantProps, cva } from 'class-variance-authority'
 import { cn } from '~/utils'
 
 export const buttonVariants = cva(
-    "text-slate-50 font-bold py-2 px-6 sm:py-2 lg:py-3 lg:px-10 xl:py-4 md:px-8 xl:px-16 relative block after:border after:absolute  after:w-[10px] after:h-[10px] lg:after:w-[13px] lg:after:h-[13px] xl:after:w-[15px] xl:after:h-[15px] after:bg-transparent after:right-[5px] after:bottom-[5px] after:border-transparent after:duration-500",
+    "text-slate-50 font-bold py-2 px-6 sm:py-2 lg:py-3 lg:px-10 xl:py-4 md:px-8 xl:px-16 relative block after:border after:absolute  after:w-[10px] after:h-[10px] lg:after:w-[13px] lg:after:h-[13px] xl:after:w-[15px] xl:after:h-[15px] after:bg-transparent after:right-[5px] after:bottom-[5px] after:border-transparent after:duration-500 text-sm md:text-base",
     {
         variants: {
             variant: {
                 // default: "bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300",
-                default: "bg-gradient-to-r from-[#119B81] via-[#28866B] to-[#00805B] hover:bg-gradient-to-br focus:ring focus:outline-none focus:ring-green-300 border border-white transition-all",
                 // default: "btn-animate  bg-color-500 font-bold border border-white hover:bg-[var(--dark-1)] transition-colors",
+                default: "bg-gradient-to-r from-[#119B81] via-[#28866B] to-[#00805B] hover:bg-gradient-to-br focus:ring focus:outline-none focus:ring-green-300 border border-white transition-all",
                 main: " bg-gradient-to-r from-[#119B81] via-[#28866B] to-[#00805B] hover:bg-gradient-to-br btn-animate transition-all",
                 mainWhite: " bg-white btn-animate text-slate-950",
                 whiteMain: "btn-animate-lg text-lg md:w-3/4 w-full mr-4 md:ml-4 after:border-r-color-400 after:border-r-2 after:border-b-2 border-2 after:border-b-color-400 border-color-400 text-color-400",

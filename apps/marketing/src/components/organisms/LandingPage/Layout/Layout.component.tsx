@@ -1,5 +1,3 @@
-// import Nav from '@/components/organisms/Nav/Nav.component'
-// import Footer from '@/components/organisms/Footer/Footer.component'
 import { NextSeo } from 'next-seo'
 import Link from "next/link";
 import Nav from "~/components/molecules/Nav";
@@ -12,10 +10,8 @@ export default function RootLayout({
   children: React.ReactNode,
 }) {
 
-
   return (
     <>
-        {/* <Nav classNames='bg-transparent' baseUrl="."/> */}
         <NextSeo
           title={`Trade Tracker - Next generation investment journal and analysis`}
           description="Trade Tracker - next generation investment journal and analysis. Boost consistency and gain insights specific to your trading style."
@@ -24,7 +20,6 @@ export default function RootLayout({
             <Nav />
         </header>
           {children}
-        {/* <Footer /> */}
         <a href="#" className="block bg-color-600 w-full text-center p-6 text-slate-50 hover:bg-color-500">Back to top</a>
 
         <footer className="bg-[var(--dark-1)] w-full ">
@@ -42,9 +37,9 @@ export default function RootLayout({
               m-auto
             "
           >
-            <div className="my-16">
-              <IconLogoWhite width="12rem" height="5rem" />
-              <p className="text-slate-300">© Trade Tracker 2023</p>
+            <div className="my-8 m-auto md:mx-0 md:my-2">
+              <IconLogoWhite width="8rem" height="5rem" />
+              <p className="text-slate-300 text-sm md:text-base md:mb-4">© Trade Tracker 2024</p>
             </div>
 
             <svg

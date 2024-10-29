@@ -1,27 +1,16 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import Link from "next/link";
-
 import IconClose from '~/images/svgs/icon-close.svg'
-// import LoginSignUp from "~/components/organisms/LoginSignUp"
-// import VisuallyHidden from '@radix-ui/react-visually-hidden';
-// import { buttonVariants } from "~/components/atoms/ButtonLink"
-
-
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 
 const DialogNav = () => (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        {/* <button className="text-slate-400 shadow-black hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
-          Try for Free →
-        </button> */}
-
             <button className="z-20 flex-col justify-center items-center lg:hidden flex" >
                 <span className={`bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5`}></span>
                 <span className={`bg-black  block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 opacity-100`}></span>
                 <span className={`bg-black block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm translate-y-0.5`}></span>
             </button>
-
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="z-20 bg-gradient-to-br from-[#FFFFFF] to-[var(--gradient-color)] data-[state=open]:animate-overlayShow fixed inset-0" />
@@ -39,27 +28,6 @@ const DialogNav = () => (
             </Dialog.Description>
           </VisuallyHidden.Root>
 
-          {/* <fieldset className="mb-[15px] flex items-center gap-5">
-            <label className="text-violet11 w-[90px] text-right text-[15px]" htmlFor="name">
-              Name
-            </label>
-            <input
-              className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-              id="name"
-              defaultValue="Pedro Duarte"
-            />
-          </fieldset>
-          <fieldset className="mb-[15px] flex items-center gap-5">
-            <label className="text-violet11 w-[90px] text-right text-[15px]" htmlFor="username">
-              Username
-            </label>
-            <input
-              className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-              id="username"
-              defaultValue="@peduarte"
-            />
-          </fieldset> */}
-          {/* <LoginSignUp /> */}
           <nav className="h-full max-w-full">
           <ul
                             className="
@@ -68,9 +36,10 @@ const DialogNav = () => (
                             flex
                             items-center
                             flex-col
-                            text-4xl
                             relative
-                            top-[15%]"
+                            top-[15%]
+                            text-lg
+                            md:text-3xl"
 
                         >
                             <li className="p-4">
@@ -96,13 +65,7 @@ const DialogNav = () => (
                             </li>
                         </ul>
           </nav>
-          {/* <div className="mt-[25px] flex justify-end">
-            <Dialog.Close asChild>
-              <button className="bg-green4 text-green11 hover:bg-green5 focus:shadow-green7 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-medium leading-none focus:shadow-[0_0_0_2px] focus:outline-none">
-                Close dialog
-              </button>
-            </Dialog.Close>
-          </div> */}
+
           <Dialog.Close asChild>
             <button
               className=" hover:bg-grey focus:shadow-slate-400 absolute top-8 right-8 inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:shadow-[0_0_0_2px] focus:outline-none"

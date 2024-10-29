@@ -3,6 +3,40 @@
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/login',
+        destination: '/',
+        permanent: false
+      },
+      {
+        source: '/dashboard:slug*',
+        destination: '/',
+        permanent: false
+      },
+      {
+        source: '/activate',
+        destination: '/',
+        permanent: false
+      },
+      {
+        source: '/forgot-password',
+        destination: '/',
+        permanent: false
+      },
+      {
+        source: '/password-reset',
+        destination: '/',
+        permanent: false
+      },
+      {
+        source: '/reset-request',
+        destination: '/',
+        permanent: false
+      }
+    ]
+  },
   transpilePackages: ["ui"],
 
   experimental: {
