@@ -1,19 +1,12 @@
 import * as Dialog from '@radix-ui/react-dialog'
-
 import LoginSignUp from "~/components/organisms/LoginSignUp"
-// import VisuallyHidden from '@radix-ui/react-visually-hidden';
 import { buttonVariants } from "~/components/atoms/ButtonLink"
-
 
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 
 const DialogDemo = () => (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        {/* <button className="text-slate-400 shadow-black hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
-          Try for Free →
-        </button> */}
-
         <button className={buttonVariants({variant: 'default'})}>
           Try for Free →
         </button>
@@ -35,26 +28,6 @@ const DialogDemo = () => (
             </Dialog.Description>
           </VisuallyHidden.Root>
 
-          {/* <fieldset className="mb-[15px] flex items-center gap-5">
-            <label className="text-violet11 w-[90px] text-right text-[15px]" htmlFor="name">
-              Name
-            </label>
-            <input
-              className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-              id="name"
-              defaultValue="Pedro Duarte"
-            />
-          </fieldset>
-          <fieldset className="mb-[15px] flex items-center gap-5">
-            <label className="text-violet11 w-[90px] text-right text-[15px]" htmlFor="username">
-              Username
-            </label>
-            <input
-              className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-              id="username"
-              defaultValue="@peduarte"
-            />
-          </fieldset> */}
           <LoginSignUp />
           <div className="mt-[25px] flex justify-end">
             <Dialog.Close asChild>

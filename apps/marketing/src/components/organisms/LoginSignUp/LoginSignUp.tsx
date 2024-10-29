@@ -2,7 +2,6 @@ import {useState} from 'react'
 import Tabs from "~/components/molecules/Tabs"
 import IconLogo from '~/components/atoms/IconLogo'
 import { useRouter } from 'next/navigation'
-// import SignInButton from '~/components/molecules/SignInButton/SignInButton'
 
 export default function LoginSignUp(){
 

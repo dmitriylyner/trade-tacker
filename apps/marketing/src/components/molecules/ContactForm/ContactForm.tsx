@@ -3,7 +3,6 @@ import { useForm, ValidationError } from "@formspree/react";
 
 export default function ContactForm() {
 
-    // const [state, handleSubmit] = useForm("xyyqoljy");
     const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || '');
 
     return (
@@ -11,7 +10,6 @@ export default function ContactForm() {
             <div className="mb-4">
             <h4 className="text-center leading-7 mb-8">Woah, you made it all the way down here. <br/> Reward yourself by signing up to our awesome newsletter.</h4>
 
-            {/* <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email Address</label> */}
             <input 
                 id="email" 
                 type="email"
@@ -34,7 +32,10 @@ export default function ContactForm() {
                     <span className="underline">Join for secret sauce →</span>
                 </button>
             }
-            <ValidationError errors={state.errors} />
+            <ValidationError 
+                errors={state.errors} 
+                className="text-center italic mt-1"
+            />
 
             </div>
         </form>

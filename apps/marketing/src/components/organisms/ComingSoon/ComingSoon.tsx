@@ -26,7 +26,7 @@ export default function ComingSoon(){
                          </section>
                     :
                         <section className="mx-4 my-6 ">
-                            <h1 className="text-4xl mb-4 text-center font-extrabold">Sign Up</h1>
+                            <h1 className="text-4xl mb-2 text-center font-extrabold">Sign Up</h1>
                             <p className="text-center mb-4">It&apos;s free!</p>
 
                             <form onSubmit={(event) => void handleSubmit(event)} className="space-y-5 mt-4 mb-8">
