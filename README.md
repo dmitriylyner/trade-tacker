@@ -22,8 +22,8 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
+- `marketing`: [Trade Tracker](https://tradetracker.ai/) landing page
+- `web`: another [Next.js](https://app.tradetracker.ai/) app
 - `ui`: a stub React component library shared by both `web` and `docs` applications
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
@@ -57,10 +57,9 @@ npm run dev
 ```
 
 To run individual app:
-```
-npm run web
-npm run marketing
-```
+```npm run web``` - web workspace on port 3000
+```npm run marketing``` - marketing workspace on port 3001
+
 scrip is short for specific workspace ```npm run dev -w=web ```
 
 ### Remote Caching
